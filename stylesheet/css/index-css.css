@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(".img/background/desktop_background.jpg");
+    background-image: src("");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
