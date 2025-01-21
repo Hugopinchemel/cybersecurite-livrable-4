@@ -53,6 +53,17 @@
     function transition() {
         const blackSquare = document.querySelector('.black-square');
         blackSquare.style.opacity = '1';
+
+        setTimeout(() => {
+            window.location.href = 'desktop.html';
+        }, 1000);
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = 'desktop.html';
+        document.head.appendChild(link);
+    });
 </script>
 </html>
