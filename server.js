@@ -36,13 +36,13 @@ const port = process.env.PORT || 8080;
 
 app.get('/reset', (req, res) => {
   res.setHeader('Content-Type', 'text/css');
-  res.sendFile(path.join(__dirname + 'stylesheet/css/reset.css'));
+  res.sendFile(path.join(__dirname + '/stylesheet/css/reset.css'));
   console.log('User requested reset.css');
 });
 
 app.get('/index-sass', (req, res) => {
   res.setHeader('Content-Type', 'text/css');
-  res.sendFile(path.join(__dirname + 'sass/index-sass.html'));
+  res.sendFile(path.join(__dirname + '/sass/index-sass.html'));
   console.log('User requested index-sass.html');
 });
 
@@ -55,9 +55,9 @@ app.get('/index-sass', (req, res) => {
 
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/html');
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join(__dirname + '/public/index/index.html'));
   console.log('User requested index.html');
-}
+});
 
 
 
