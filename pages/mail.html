@@ -1,64 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Positionnement des blocs</title>
-        <link href="stylesheet/css/reset-css.css" rel="stylesheet">
-    <link href="stylesheet/css/font-css.css" rel="stylesheet">
-    <link href="stylesheet/css/index-css.css" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
-        .container {
-            position: relative;
-            width: 600px;
-            height: 400px;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
-        .block {
-            position: absolute;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .block.valider {
-            top: 50px;
-            left: 50px;
-            background-color: #4CAF50;
-            color: white;
-        }
-        .block.refuser {
-            top: 120px;
-            left: 50px;
-            background-color: #FF5252;
-            color: white;
-        }
-        .block.info {
-            top: 190px;
-            left: 50px;
-            background-color: #2196F3;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="hud_mail.png" alt="Interface HUD">
-        <div class="block valider">VALIDER</div>
-        <div class="block refuser">REFUSER</div>
-        <div class="block info">INFO</div>
+    <link rel="stylesheet" href="../stylesheet/reset-css.css">
+    <link rel="stylesheet" href="../stylesheet/index-css.css" />
+    <link rel="stylesheet" href="../stylesheet/font-css.css" />
+    <link rel="stylesheet" href="../stylesheet/mail-css.css" />
+  <body>
+    <div class="global-mail-hud">
+        <div class="head-mail-hud">
+            carré 1 
+        </div>
+        <div class="separate-mail-hud">
+            <div class="left-side-hud">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <div class="right-side-hud">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+            </div>
+        </div>  
     </div>
-</body>
+  </body>
 </html>
