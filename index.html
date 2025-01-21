@@ -10,6 +10,7 @@
 <body>
 
 <div class="display">
+    <div class="black-square"></div>
     <div class="screen-background">
         <div class="content">
             <div class="left-div">
@@ -30,7 +31,7 @@
                             image
                         </div>
                         <div>
-                            Jouer
+                            <a id="changeColorLink" onclick="transition()">Jouer</a>
                         </div>
                     </div>
                     <div class="right-div-content-row">
@@ -48,4 +49,10 @@
 </div>
 
 </body>
+<script>
+    function transition() {
+        const blackSquare = document.querySelector('.black-square');
+        blackSquare.style.opacity = '1';
+    }
+</script>
 </html>
