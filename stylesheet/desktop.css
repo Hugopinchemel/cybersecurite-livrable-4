@@ -3,9 +3,10 @@ html {
     height: 100%;
 }
 
+
 body {
     font-family: IbmPlexMono, serif;
-    background-image: url('../elements/pictures/backgrounds/desktop_background.jpg');
+    background-image: url('../elements/pictures/backgrounds/desktop_background.png');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: url("../elements/desktop-icon/accwiz.exe_14_244.ico"), auto;
