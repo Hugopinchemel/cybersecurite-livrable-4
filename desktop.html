@@ -2,15 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>desktop</title>
+    <title>Desktop</title>
     <link href="stylesheet/reset-css.css" rel="stylesheet">
     <link href="stylesheet/font-css.css" rel="stylesheet">
     <link href="stylesheet/desktop.css" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
+<div class="desktop-grid">
+
+    <div class="task-bar"></div>
+    <div class="start">
+        <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
+        Démarrer
+    </div>
+
+    <div class="start-menu">
+
+        <div class="menu-title">
+            User
+        </div>
+
+        <div class="applications-list">
+            <div class="application">
+                <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
+                Applications
+            </div>
+            <div class="application">
+                <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
+                Applications
+            </div>
+
+        </div>
+
+        <div class="disconnect">
+            <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
+            Déconnecter
+        </div>
+
+    </div>
+
+
+    <div class="desktop-element" id="desktop-element-1">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/desktop-icon/appwiz.cpl_14_1503.ico" width="44px">
+        </div>
+        <div class="desktop-element-title">
+            Corbeille
+        </div>
+    </div>
+    <div class="desktop-element" id="desktop-element-2">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/desktop-icon/icwconn1.exe_14_201.ico" width="44px">
+        </div>
+        <div class="desktop-element-title">
+            Internet
+        </div>
+    </div>
+    <div class="desktop-element" id="desktop-element-3">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/desktop-icon/explorer.exe_14_252.ico" width="44px">
+        </div>
+        <div class="desktop-element-title">
+            Fichiers
+        </div>
+    </div>
+    <div class="desktop-element" id="desktop-element-4">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/desktop-icon/msoeres.dll_14_52.ico" width="44px">
+        </div>
+        <div class="desktop-element-title">
+            Emails
+        </div>
+    </div>
+    <div class="desktop-element" id="desktop-element-5">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/desktop-icon/msoeres.dll_14_52.ico" width="44px">
+        </div>
+        <div class="desktop-element-title">
+            2Pipe
+        </div>
+    </div>
+</div>
+
+
 
 </body>
 <script>
+
     document.addEventListener('DOMContentLoaded', () => {
         const blackSquare = document.createElement('div');
         blackSquare.className = 'black-square';
