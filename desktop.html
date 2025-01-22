@@ -86,9 +86,25 @@
 </div>
 
 
-
 </body>
 <script>
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const startButton = document.querySelector('.start');
+        const startMenu = document.querySelector('.start-menu');
+
+        startButton.addEventListener('click', () => {
+            startMenu.style.display = startMenu.style.display === 'grid' ? 'none' : 'grid';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!startButton.contains(event.target) && !startMenu.contains(event.target)) {
+                startMenu.style.display = 'none';
+            }
+        });
+    });
+
 
     document.addEventListener('DOMContentLoaded', () => {
         const blackSquare = document.createElement('div');

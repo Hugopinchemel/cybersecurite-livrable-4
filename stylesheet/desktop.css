@@ -10,11 +10,10 @@ body {
     background-repeat: no-repeat;
     cursor: url("../elements/desktop-icon/accwiz.exe_14_244.ico"), auto;
     color: white;
-    text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px  1px 0 #000,
-            1px  1px 0 #000;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .black-square {
@@ -63,6 +62,11 @@ body {
     align-items: center;
 }
 
+.desktop-element:hover {
+    background-color: rgba(145, 174, 238, 0.25);
+    backdrop-filter: blur(1px);
+}
+
 #desktop-element-1 {
     grid-column: 16 / 17;
     grid-row: 8 / 9;
@@ -73,7 +77,7 @@ body {
     grid-row: 2 / 3;
 }
 
-#desktop-element-3{
+#desktop-element-3 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
@@ -89,10 +93,10 @@ body {
 }
 
 .start-menu {
+    display: none;
     grid-column: 1/5;
     grid-row: 5/9;
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15% 75% 10%;
     background-color: #3580e2;
 
@@ -123,10 +127,11 @@ body {
     gap: 20px;
 }
 
-.application{
+.application {
     border-radius: 10px;
     padding: 10px;
 }
+
 .application:hover {
     background-color: #529b42;
     cursor: pointer;
