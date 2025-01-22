@@ -1,0 +1,56 @@
+.title {
+    width: 1355px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 2px solid #000;
+    background: #C1C1C1;
+}
+
+.menu {
+    width: 385.182px;
+    height: 904px;
+    flex-shrink: 0;
+    background: #C1C1C1;
+}
+
+.dialog {
+    width: 964px;
+    height: 862px;
+    flex-shrink: 0;
+    border: 2px solid #000;
+    background: #8D8D8D;
+    box-sizing: border-box
+}
+
+.info {
+    display: flex;
+    width: 385px;
+    padding: 0px 28px 0px 27px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.profil {
+    width: 360px;
+    height: 848px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+}
+
+.name {
+    width: 107px;
+    height: 823px;
+    transform: rotate(-90deg);
+    flex-shrink: 0;
+}
+
+h1 {
+    color: #000;
+    font-family: Inter;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
