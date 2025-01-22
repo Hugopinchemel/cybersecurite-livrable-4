@@ -49,7 +49,7 @@ body {
   height: 20%;
   border: 1px solid black;
   &:hover {
-    background-color: lightblue;
+    background-color: lightgrey;
     cursor: pointer;
   }
 }
@@ -119,9 +119,8 @@ body {
 }
 .first-header-left-top {
   display: flex;
-  justify-content: center;
+  padding-left: 10px;
   align-items: center;
-  width: calc(100% - 2px);
   height: 25%;
   border: 1px solid black;
 }
@@ -156,7 +155,7 @@ body {
 }
 .first-header-left-bottom-text-top div {
   display: flex;
-  justify-content: center;
+  padding-left: 10px;
   align-items: center;
   border: 1px solid black;
 }
@@ -171,7 +170,7 @@ body {
 }
 .first-header-left-bottom-text-bottom {
   display: flex;
-  justify-content: center;
+  padding-left: 10px;
   align-items: center;
   width: 50%;
   height: 50%;
