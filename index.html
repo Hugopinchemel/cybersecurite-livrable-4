@@ -55,9 +55,14 @@
         blackSquare.style.opacity = '1';
 
         setTimeout(() => {
+            blackSquare.style.opacity = '0';
+        }, 1000);
+
+        setTimeout(() => {
             window.location.href = 'desktop.html';
         }, 1000);
     }
+
 
     document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('link');
