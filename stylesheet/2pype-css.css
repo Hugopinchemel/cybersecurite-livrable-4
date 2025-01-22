@@ -2,14 +2,14 @@ body {
     background-image: url(../elements/pictures/backgrounds/desktop_background.jpg);
   }
   
-  .global-skype-hud {
+  .global-2pype-hud {
     background-color: lightgray;
   
     width: 90vw;
     height: 90vh;
     margin: 5vh 5vw;
   }
-  .head-skype-hud {
+  .head-2pype-hud {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ body {
     border: 1px solid black;
   }
   
-  .separate-skype-hud {
+  .separate-2pype-hud {
     display: flex;
     width: 100%;
     height: 95%;
