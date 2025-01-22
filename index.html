@@ -2,68 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>Loading</title>
     <link href="stylesheet/reset-css.css" rel="stylesheet">
-    <link href="stylesheet/font-css.css" rel="stylesheet">
-    <link href="stylesheet/index-css.css" rel="stylesheet">
+    <link href="stylesheet/loading-css.css" rel="stylesheet">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const preloads = [
+                'loading.html',
+                'desktop.html',
+                'pages/2pype.html',
+                'pages/6mail.html',
+                'pages/doodle.html',
+                'stylesheet/2pype-css.css',
+                'stylesheet/desktop.css',
+                'stylesheet/reset-css.css',
+                'stylesheet/loading-css.css',
+                'stylesheet/index-css.css',
+                'stylesheet/font-css.css',
+                'stylesheet/mail-css.css',
+                'script/mail.js'
+            ];
+
+            preloads.forEach(href => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = href.endsWith('.css') ? 'style' : 'document';
+                link.href = href;
+                document.head.appendChild(link);
+            });
+
+            setTimeout(() => {
+                window.location.href = 'homepage.html';
+            }, 3000);
+        });
+    </script>
+
+
 </head>
 <body>
-
-<div class="display">
-    <div class="black-square"></div>
-    <div class="screen-background">
-        <div class="content">
-            <div class="left-div">
-                <div class="left-div-content">
-                    <div>
-                        <img src="elements/pictures/bigrosoft.png" alt="">
-                    </div>
-                    <div style="color: white;">
-                        Pour commencer,<br> cliquez sur votre nom d'utilisateur
-                    </div>
-                </div>
-            </div>
-            <div class="line"></div>
-            <div class="right-div">
-                <div class="right-div-content">
-                    <div class="right-div-content-row">
-                        <div>
-                            image
-                        </div>
-                        <div>
-                            <a id="changeColorLink" onclick="transition()">Jouer</a>
-                        </div>
-                    </div>
-                    <div class="right-div-content-row">
-                        <div>
-                            image
-                        </div>
-                        <div>
-                            Crédits
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="window">
+    <div class="logo">
+        <p class="top">Bigrosoft</p>
+        <p class="mid">Bindows<span>XB</span></p>
+        <p class="bottom">Débutant</p>
+    </div>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
     </div>
 </div>
-
 </body>
-<script>
-    function transition() {
-        const blackSquare = document.querySelector('.black-square');
-        blackSquare.style.opacity = '1';
-
-        setTimeout(() => {
-            window.location.href = 'loading.html';
-        }, 1000);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = 'loading.html';
-        document.head.appendChild(link);
-    });
-</script>
 </html>
