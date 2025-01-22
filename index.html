@@ -55,18 +55,14 @@
         blackSquare.style.opacity = '1';
 
         setTimeout(() => {
-            blackSquare.style.opacity = '0';
-        }, 1000);
-
-        setTimeout(() => {
-            window.location.href = 'desktop.html';
+            window.location.href = 'loading.html';
         }, 1000);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('link');
         link.rel = 'prefetch';
-        link.href = 'desktop.html';
+        link.href = 'loading.html';
         document.head.appendChild(link);
     });
 </script>
