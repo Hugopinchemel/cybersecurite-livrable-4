@@ -8,52 +8,218 @@
     <link rel="stylesheet" href="/stylesheet/index-css.css" />
     <link rel="stylesheet" href="/stylesheet/font-css.css" />
     <link rel="stylesheet" href="/stylesheet/mail-css.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/script/mail.js"defer></script>
   <body>
+    
     <div class="global-mail-hud">
-        <div class="head-mail-hud">
-            carré 1 
-        </div>
+        <div class="head-mail-hud"></div>
         <div class="separate-mail-hud">
             <div class="left-side-hud">
                 <div><img src="" alt="COUCOU"></div>
-                <div class="good"><img  src="" alt="Bouton ok"></div>
-                <div class="false"><img src="" alt="Bouton non"></div>
+                <div class="good"><img  src="../elements/pictures/buttons/valider.png" alt="Bouton ok"></div>
+                <div class="false"><img src="../elements/pictures/buttons/refuser.png" alt="Bouton non"></div>
                 <div><img src="" alt="COUCOU"></div>
             </div>
             <div class="right-side-hud">
+           
+              <!-- ALERT ATTENTION -->
+                <div class="alertproblem problem1">
+                  <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
+                  <div class="alert-text">L'adresse e-mail "support@nettflix.eu" est suspecte en raison du "tt" car les entreprises légitimes utilisent leur domaine officiel, ici "netflix.com".</div>
+                </div>
+                <div class="alertproblem problem2">
+                  <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
+                  <div class="alert-text">Le lien n’est pas valide il ne redirige pas vers le bon site. Accédez directement au site officiel en tapant l'URL dans votre navigateur et vérifiez vos commandes dans votre espace client.</div>
+                </div>
+                <div class="alertproblem problem3">
+                  <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
+                  <div class="alert-text">Le lien redirige bien vers le site edf.</div>
+                </div>
+                <div class="alertproblem problem4">
+                  <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
+                  <div class="alert-text">Vérifiez le lien et méfiez vous des objets alarmants en cas de doute contactez le service informatique via des canaux officiels.</div>
+                </div>
+                <div class="alertproblem problem5">
+                  <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
+                  <div class="alert-text">Cet email présente des signes de phishing : objet urgent, coordonnées bancaires suspectes, et lien frauduleux. Ne cliquez pas sur le lien, vérifiez les informations via des canaux officiels.</div>
+                </div>
 
-                 <div class="first" style="width: 100%; height: 100%; background-color: #C1C1C1; border: 1px solid black;">
-                  <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                      <div style=" display: flex; flex-direction:row; margin: 4vh 2vw; height: 15%; color: black;">
-                          <div style="width:80%; ">
-                            <div style="display:flex; justify-content: center; align-items: center; width:calc(100% - 2px); height:25%; border: 1px solid black;">1</div>
-                            <div style="display: flex; flex-direction:row; height: 75%;">
-                                <div style="width: 10%;  display: flex; align-items: center;">
-                                <img style="width: 75px; height: 75px; border-radius: 100%; border: 1px solid black;" src="../elements/pictures/backgrounds/desktop_background.jpg" alt="Ratio">
-                                </div>
-                              <div style="display: flex; flex-direction: column; width: 100%; height: 80%; margin: 10px 0;">
-                                <div style="display: flex; flex-direction: row; width: 100%; height: 50%;">
-                                  <div style="display: flex; justify-content: center; align-items: center; width: 40%; height: 90%; border: 1px solid black;">haut1</div>
-                                  <div style="display: flex; justify-content: center; align-items: center;width: 100%; height: 90%; margin: 0 100px 0 10px; border: 1px solid black;">haut2</div>
-                                </div>
-                                <div style="display: flex; justify-content: center; align-items: center; width: 50%; height: 50%; margin: 0 50% 0 0; border: 1px solid black;">Salut</div>
-                              </div>
+              <!-- ALERT BRABO -->
+              <div class="alertok great1">
+                <img src="../elements/pictures/backgrounds/bulle.png" alt="alert ok">
+                <div class="alert-text">Vous avez su déjouer cette arnaque </div>
+              </div>
+              <div class="alertok great2">
+                <img src="../elements/pictures/backgrounds/bulle.png" alt="alert ok">
+                <div class="alert-text">Vous avez su déjouer cette arnaque</div>
+              </div>
+              <div class="alertok great3">
+                <img src="../elements/pictures/backgrounds/bulle.png" alt="alert ok">
+                <div class="alert-text">Vous avez su déjouer cette arnaque</div>
+              </div>
+              <div class="alertok great4">
+                <img src="../elements/pictures/backgrounds/bulle.png" alt="alert ok">
+                <div class="alert-text">Vous avez su déjouer cette arnaque</div>
+              </div>
+              <div class="alertok great5">
+                <img src="../elements/pictures/backgrounds/bulle.png" alt="alert ok">
+                <div class="alert-text">Vous avez su déjouer cette arnaque</div>
+              </div>
+
+
+              <!--  PREMIER MAIL -->
+                <div class="first">
+                  <div class="first-container">
+                    <div class="first-header">
+                      <div class="first-header-left">
+                        <div class="first-header-left-top">1</div>
+                        <div class="first-header-left-bottom">
+                          <div class="first-header-left-bottom-img">
+                            <img src="../elements/pictures/backgrounds/desktop_background.jpg" alt="Ratio">
+                          </div>
+                          <div class="first-header-left-bottom-text">
+                            <div class="first-header-left-bottom-text-top">
+                              <div class="haut1">haut1</div>
+                              <div class="haut2">haut2</div>
                             </div>
+                            <div class="first-header-left-bottom-text-bottom">Salut</div>
                           </div>
-                          <div style="display: flex; align-items: flex-end; width:20%; background-color:#C1C1C1;">
-                              <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 30%; border: 1px solid black;">21/08/2015</div>
-                          </div>
+                        </div>
                       </div>
-                    <div style="display: flex; flex-grow: 1; margin: 0 2vw 2vh 2vw; padding: 20px; line-height: 1.5; font-size:16px;  color: black; border: 1px solid black;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eveniet veniam quisquam. Quam error doloribus nisi tenetur asperiores maxime ex. </div>
+                      <div class="first-header-right">
+                        <div>21/08/2015</div>
+                      </div>
+                    </div>
+                    <div class="first-content">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eveniet veniam quisquam. Quam error doloribus nisi tenetur asperiores maxime ex.
+                    </div>
                   </div>
                 </div>
 
-                <div class="mail" data-context="mail1">1</div>
-                <div class="mail" data-context="mail2">2</div>
-                <div class="mail" data-context="mail3">3</div>
-                <div class="mail" data-context="mail4">4</div>
-                <div class="mail" data-context="mail5">5</div>
+              <!-- DEUXIEME MAIL -->
+              <div class="second">
+                <div class="first-container">
+                  <div class="first-header">
+                    <div class="first-header-left">
+                      <div class="first-header-left-top">1</div>
+                      <div class="first-header-left-bottom">
+                        <div class="first-header-left-bottom-img">
+                          <img src="../elements/pictures/backgrounds/desktop_background.jpg" alt="Ratio">
+                        </div>
+                        <div class="first-header-left-bottom-text">
+                          <div class="first-header-left-bottom-text-top">
+                            <div class="haut1">haut1</div>
+                            <div class="haut2">haut2</div>
+                          </div>
+                          <div class="first-header-left-bottom-text-bottom">Salut</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="first-header-right">
+                      <div>21/08/2015</div>
+                    </div>
+                  </div>
+                  <div class="first-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eveniet veniam quisquam. Quam error doloribus nisi tenetur asperiores maxime ex.
+                  </div>
+                </div>
+              </div>
+
+              <!-- TROISIEME MAIL -->
+              <div class="third">
+                <div class="first-container">
+                  <div class="first-header">
+                    <div class="first-header-left">
+                      <div class="first-header-left-top">1</div>
+                      <div class="first-header-left-bottom">
+                        <div class="first-header-left-bottom-img">
+                          <img src="../elements/pictures/backgrounds/desktop_background.jpg" alt="Ratio">
+                        </div>
+                        <div class="first-header-left-bottom-text">
+                          <div class="first-header-left-bottom-text-top">
+                            <div class="haut1">haut1</div>
+                            <div class="haut2">haut2</div>
+                          </div>
+                          <div class="first-header-left-bottom-text-bottom">Salut</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="first-header-right">
+                      <div>21/08/2015</div>
+                    </div>
+                  </div>
+                  <div class="first-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eveniet veniam quisquam. Quam error doloribus nisi tenetur asperiores maxime ex.
+                  </div>
+                </div>
+              </div>
+
+              <!-- QUATRIEME MAIL -->
+              <div class="fourth">
+                <div class="first-container">
+                  <div class="first-header">
+                    <div class="first-header-left">
+                      <div class="first-header-left-top">1</div>
+                      <div class="first-header-left-bottom">
+                        <div class="first-header-left-bottom-img">
+                          <img src="../elements/pictures/backgrounds/desktop_background.jpg" alt="Ratio">
+                        </div>
+                        <div class="first-header-left-bottom-text">
+                          <div class="first-header-left-bottom-text-top">
+                            <div class="haut1">haut1</div>
+                            <div class="haut2">haut2</div>
+                          </div>
+                          <div class="first-header-left-bottom-text-bottom">Salut</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="first-header-right">
+                      <div>21/08/2015</div>
+                    </div>
+                  </div>
+                  <div class="first-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eveniet veniam quisquam. Quam error doloribus nisi tenetur asperiores maxime ex.
+                  </div>
+                </div>
+              </div>
+
+              <!-- CINQUIEME MAIL -->
+              <div class="fifth">
+                <div class="first-container">
+                  <div class="first-header">
+                    <div class="first-header-left">
+                      <div class="first-header-left-top">1</div>
+                      <div class="first-header-left-bottom">
+                        <div class="first-header-left-bottom-img">
+                          <img src="../elements/pictures/backgrounds/desktop_background.jpg" alt="Ratio">
+                        </div>
+                        <div class="first-header-left-bottom-text">
+                          <div class="first-header-left-bottom-text-top">
+                            <div class="haut1">haut1</div>
+                            <div class="haut2">haut2</div>
+                          </div>
+                          <div class="first-header-left-bottom-text-bottom">Salut</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="first-header-right">
+                      <div>21/08/2015</div>
+                    </div>
+                  </div>
+                  <div class="first-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eveniet veniam quisquam. Quam error doloribus nisi tenetur asperiores maxime ex.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Affichage de l'HUD de base -->
+                
+                <div class="mail" data-context="mail1"></div>
+                <div class="mail" data-context="mail2"></div>
+                <div class="mail" data-context="mail3"></div>
+                <div class="mail" data-context="mail4"></div>
+                <div class="mail" data-context="mail5"></div> 
             
         </div> 
 
