@@ -33,7 +33,7 @@ body {
       justify-content: center;
       border: 1px solid black;
     }
-    .right-side-hud {
+    .center-side-hud {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -41,13 +41,31 @@ body {
       background-color: lightgray;
       border: 1px solid black;
     }
+
+    .right-side-hud {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        width: 75%;
+        background-color: lightgray;
+        border: 1px solid black;
+      }
   }
   
+  .profile-side-hud div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20%;
+    border: 1px solid black;
+  }
+
   .right-side-hud div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 50%;
     height: 20%;
     border: 1px solid black;
   }
