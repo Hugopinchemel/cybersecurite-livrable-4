@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link href="stylesheet/reset-css.css" rel="stylesheet">
+    <link href="stylesheet/font-css.css" rel="stylesheet">
+    <link href="stylesheet/index-css.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="display">
+    <div class="black-square"></div>
+    <div class="screen-background">
+        <div class="content">
+            <div class="left-div">
+                <div class="left-div-content">
+                    <div>
+                        <img src="elements/pictures/bigrosoft.png" alt="logo bigrosoft" width="100">
+                    </div>
+                    <div style="color: white;">
+                        Pour commencer,<br> cliquez sur votre nom d'utilisateur
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="right-div">
+                <div class="right-div-content">
+                    <div class="right-div-content-row">
+                        <div>
+                            image
+                        </div>
+                        <div>
+                            <a id="changeColorLink" onclick="transition()">Jouer</a>
+                        </div>
+                    </div>
+                    <div class="right-div-content-row">
+                        <div>
+                            image
+                        </div>
+                        <div>
+                            Crédits
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    function transition() {
+        const blackSquare = document.querySelector('.black-square');
+        blackSquare.style.opacity = '1';
+
+        setTimeout(() => {
+            window.location.href = 'desktop.html';
+        }, 1000);
+    }
+</script>
+</html>
