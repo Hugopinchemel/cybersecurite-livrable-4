@@ -64,7 +64,7 @@ body {
     background-color: #5a7ddb;
 }
 
-.right-div{
+.right-div {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -77,6 +77,11 @@ body {
 }
 
 img {
-    height: 44px;
-    width: 44px;
+    height: 88px;
+    width: 88px;
+}
+
+.left-div-content img{
+    height: 176px;
+    width: 176px;
 }
