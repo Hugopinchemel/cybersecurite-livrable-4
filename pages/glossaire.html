@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossaire</title>
+    <title>Glossaire Interactif</title>
     <link href="../stylesheet/reset-css.css" rel="stylesheet">
     <link href="../stylesheet/font-css.css" rel="stylesheet"/>
     <link href="../stylesheet/glossaire-css.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1>Glossaire Interactif</h1>
-    <div class="container">
+    <header>
+        <h1>Glossaire Interactif</h1>
+    </header>
+    <main class="container">
         <div class="glossaire">
-            <div class="terme">HTML</div>
-            <div class="definition">HyperText Markup Language, utilisé pour structurer le contenu des pages web.</div>
-
-            <div class="terme">CSS</div>
-            <div class="definition">Cascading Style Sheets, utilisé pour styliser les pages web.</div>
-
-            <div class="terme">JavaScript</div>
-            <div class="definition">Un langage de programmation qui permet de rendre les pages web interactives.</div>
-
-            <div class="terme">Accessibilité</div>
-            <div class="definition">Pratique visant à rendre les sites web utilisables par tous, y compris les personnes handicapées.</div>
+            <div class="entry">
+                <div class="terme">HTML</div>
+                <div class="definition">HyperText Markup Language, utilisé pour structurer le contenu des pages web.</div>
+            </div>
+            <div class="entry">
+                <div class="terme">CSS</div>
+                <div class="definition">Cascading Style Sheets, utilisé pour styliser les pages web.</div>
+            </div>
+            <div class="entry">
+                <div class="terme">JavaScript</div>
+                <div class="definition">Un langage de programmation qui permet de rendre les pages web interactives.</div>
+            </div>
+            <div class="entry">
+                <div class="terme">Accessibilité</div>
+                <div class="definition">Pratique visant à rendre les sites web utilisables par tous, y compris les personnes handicapées.</div>
+            </div>
         </div>
-    </div>
-
-    <script>
-        // Ajout d'interactivité
-        const termes = document.querySelectorAll('.terme');
-        termes.forEach(terme => {
-            terme.addEventListener('click', () => {
-                const definition = terme.nextElementSibling;
-                definition.style.display = (definition.style.display === 'block') ? 'none' : 'block';
-            });
-        });
-    </script>
+    </main>
+    <script src="../script/glossaire.js"></script>
 </body>
 </html>
+
