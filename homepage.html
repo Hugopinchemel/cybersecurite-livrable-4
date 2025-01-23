@@ -5,7 +5,7 @@
     <title>index</title>
     <link href="stylesheet/reset-css.css" rel="stylesheet">
     <link href="stylesheet/font-css.css" rel="stylesheet">
-    <link href="stylesheet/index-css.css" rel="stylesheet">
+    <link href="stylesheet/homepage-css.css" rel="stylesheet">
 </head>
 <body>
 
@@ -16,32 +16,37 @@
             <div class="left-div">
                 <div class="left-div-content">
                     <div>
-                        <img src="elements/pictures/bigrosoft.png" alt="logo bigrosoft" width="100">
+                        <img alt="logo bigrosoft" src="elements/pictures/bigrosoft.png" width="100">
                     </div>
-                    <div style="color: white;">
-                        Pour commencer,<br> cliquez sur votre nom d'utilisateur
+                    <div>
+                        Pour commencer,
+                    </div>
+                    <div>
+                        cliquez sur votre nom d'utilisateur
                     </div>
                 </div>
             </div>
             <div class="line"></div>
             <div class="right-div">
-                <div class="right-div-content">
-                    <div class="right-div-content-row">
+                <div class="right-div-content-row">
+                    <a class="changeColorLink" onclick="transition()">
                         <div>
-                            image
+                            <img alt="profile picture" src="elements/pictures/profile/profile.png">
                         </div>
                         <div>
-                            <a id="changeColorLink" onclick="transition()">Jouer</a>
+                            Jouer
                         </div>
-                    </div>
-                    <div class="right-div-content-row">
+                    </a>
+                </div>
+                <div class="right-div-content-row"> 
+                    <a class="changeColorLink" onclick="transition_credits()">
                         <div>
-                            image
+                            <img alt="credit picture" src="elements/pictures/profile/credits.png">
                         </div>
                         <div>
                             Crédits
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -58,5 +63,16 @@
             window.location.href = 'desktop.html';
         }, 1000);
     }
+
+    function transition_credits() {
+        const blackSquare = document.querySelector('.black-square');
+        blackSquare.style.opacity = '1';
+
+        setTimeout(() => {
+            window.location.href = 'credits.html';
+        }, 1000);
+    }
+
+
 </script>
 </html>

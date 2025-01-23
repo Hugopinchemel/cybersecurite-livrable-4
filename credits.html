@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crédit</title>
+</head>
+<body>
+<div class="display">
+    <div class="black-square"></div>
+    <div class="screen-background">
+        <div class="content">
+            <div class="left-div">
+                <div class="left-div-content">
+                    <div>
+                        <img alt="logo bigrosoft" src="elements/pictures/bigrosoft.png" width="100">
+                    </div>
+                    <div>
+                        Pour commencer,
+                    </div>
+                    <div>
+                        cliquez sur votre nom d'utilisateur
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="right-div">
+                <div class="right-div-content-row">
+                    <div>
+                        <img alt="profile picture" src="elements/pictures/profile/Sprite-0003 1.png">
+                    </div>
+                    <div>
+                        <a class="changeColorLink" onclick="transition()">Jouer</a>
+                    </div>
+                </div>
+                <div class="right-div-content-row">
+                    <div>
+                        image
+                    </div>
+                    <div>
+                        <a class="changeColorLink" onclick="transition_credits()">crédits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const blackSquare = document.createElement('div');
+        blackSquare.className = 'black-square';
+        document.body.appendChild(blackSquare);
+
+
+        setTimeout(() => {
+            blackSquare.style.opacity = '0';
+        }, 100);
+
+        setTimeout(() => {
+            blackSquare.remove();
+        }, 1100);
+    });
+</script>
+</html>
