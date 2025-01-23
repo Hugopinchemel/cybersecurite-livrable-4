@@ -102,96 +102,270 @@
         rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
 
         const cookiePopup = document.createElement('div');
-        cookiePopup.style.position = 'fixed';
-        cookiePopup.style.top = '50%';
-        cookiePopup.style.left = '50%';
-        cookiePopup.style.transform = 'translate(-50%, -50%)';
+        cookiePopup.style.position = 'relative';
+        cookiePopup.style.margin = '20px auto';
         cookiePopup.style.backgroundColor = 'white';
-        cookiePopup.style.border = '2px solid black';
+        cookiePopup.style.borderRadius = '10px';
+        cookiePopup.style.backgroundImage = "url('../elements/pictures/backgrounds/cookie.png')";
+        cookiePopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without being cropped
+        cookiePopup.style.backgroundRepeat = 'no-repeat'; // Prevents the image from repeating
+        cookiePopup.style.backgroundPosition = 'center';
+        cookiePopup.style.width = '80%';
+        cookiePopup.style.height = '60%';
         cookiePopup.style.padding = '20px';
-        cookiePopup.style.zIndex = '1000';
         cookiePopup.style.textAlign = 'center';
-        cookiePopup.innerHTML = `
-                <p>Do you accept cookies?</p>
-                <button onclick="acceptCookies()">Accept</button>
-            `;
+        cookiePopup.style.display = 'flex';
+        cookiePopup.style.flexDirection = 'column';
+        cookiePopup.style.justifyContent = 'space-between';
+        cookiePopup.style.position = 'relative';
 
-        document.body.appendChild(cookiePopup);
+        // Add the button
+        const acceptButton = document.createElement('button');
+        acceptButton.innerText = 'Accept';
+        acceptButton.onclick = acceptCookies;
+
+        // Style the button (retro Windows XP style)
+        acceptButton.style.position = 'absolute';
+        acceptButton.style.bottom = '10px'; // Position inside the image
+        acceptButton.style.right = '10px'; // Position inside the image
+        acceptButton.style.padding = '10px 20px';
+        acceptButton.style.fontSize = '16px';
+        acceptButton.style.border = '2px solid #A0A0A0';
+        acceptButton.style.borderRadius = '4px';
+        acceptButton.style.backgroundColor = '#E0E0E0';
+        acceptButton.style.color = 'black';
+        acceptButton.style.fontFamily = 'Tahoma, sans-serif'; // Classic Windows font
+        acceptButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        acceptButton.style.cursor = 'pointer';
+
+        // Add hover effect (subtle glow)
+        acceptButton.onmouseover = function () {
+            acceptButton.style.backgroundColor = '#D0D0D0';
+            acceptButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
+        };
+        acceptButton.onmouseout = function () {
+            acceptButton.style.backgroundColor = '#E0E0E0';
+            acceptButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        };
+
+        cookiePopup.appendChild(acceptButton);
+
+        rightSideHud.appendChild(cookiePopup);
     }
 
+
     function acceptCookies() {
-        const cookiePopup = document.querySelector('div[style*="z-index: 1000"]');
-        if (cookiePopup) cookiePopup.remove();
+        const rightSideHud = document.getElementById('rightSideHud');
+        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
 
         const winPopup = document.createElement('div');
-        winPopup.style.position = 'fixed';
-        winPopup.style.top = '50%';
-        winPopup.style.left = '50%';
-        winPopup.style.transform = 'translate(-50%, -50%)';
-        winPopup.style.backgroundColor = 'white';
-        winPopup.style.border = '2px solid black';
+        winPopup.style.position = 'relative';
+        winPopup.style.margin = '20px auto';
+        winPopup.style.backgroundImage = "url('../elements/pictures/backgrounds/iphone.png')";
+        winPopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without cropping
+        winPopup.style.backgroundRepeat = 'no-repeat';
+        winPopup.style.backgroundPosition = 'center';
+        winPopup.style.width = '80%';
+        winPopup.style.height = '60%';
         winPopup.style.padding = '20px';
-        winPopup.style.zIndex = '1000';
         winPopup.style.textAlign = 'center';
-        winPopup.innerHTML = `
-                <p>Congratulations! You won an iPhone!</p>
-                <button onclick="errorPopup()">Close</button>
-                <button onclick="acceptPopup()">Accept</button>/
+        winPopup.style.display = 'flex';
+        winPopup.style.flexDirection = 'column';
+        winPopup.style.justifyContent = 'flex-end'; // Align buttons to the bottom
+        winPopup.style.position = 'relative';
 
-            `;
+        // Create the "Close" button
+        const closeButton = document.createElement('button');
+        closeButton.innerText = 'Close';
+        closeButton.onclick = errorPopup;
 
-        document.body.appendChild(winPopup);
+        // Style the "Close" button (retro Windows XP style)
+        closeButton.style.position = 'absolute';
+        closeButton.style.bottom = '10px';
+        closeButton.style.left = '10px';
+        closeButton.style.padding = '10px 20px';
+        closeButton.style.fontSize = '16px';
+        closeButton.style.border = '2px solid #A0A0A0';
+        closeButton.style.borderRadius = '4px';
+        closeButton.style.backgroundColor = '#E0E0E0';
+        closeButton.style.color = 'black';
+        closeButton.style.fontFamily = 'Tahoma, sans-serif';
+        closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        closeButton.style.cursor = 'pointer';
+
+        // Add hover effect for "Close" button
+        closeButton.onmouseover = function () {
+            closeButton.style.backgroundColor = '#D0D0D0';
+            closeButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
+        };
+        closeButton.onmouseout = function () {
+            closeButton.style.backgroundColor = '#E0E0E0';
+            closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        };
+
+        // Create the "Accept" button
+        const acceptButton = document.createElement('button');
+        acceptButton.innerText = 'Accept';
+        acceptButton.onclick = acceptPopup;
+
+        // Style the "Accept" button (retro Windows XP style)
+        acceptButton.style.position = 'absolute';
+        acceptButton.style.bottom = '10px';
+        acceptButton.style.right = '10px';
+        acceptButton.style.padding = '10px 20px';
+        acceptButton.style.fontSize = '16px';
+        acceptButton.style.border = '2px solid #A0A0A0';
+        acceptButton.style.borderRadius = '4px';
+        acceptButton.style.backgroundColor = '#E0E0E0';
+        acceptButton.style.color = 'black';
+        acceptButton.style.fontFamily = 'Tahoma, sans-serif';
+        acceptButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        acceptButton.style.cursor = 'pointer';
+
+        // Add hover effect for "Accept" button
+        acceptButton.onmouseover = function () {
+            acceptButton.style.backgroundColor = '#D0D0D0';
+            acceptButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
+        };
+        acceptButton.onmouseout = function () {
+            acceptButton.style.backgroundColor = '#E0E0E0';
+            acceptButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        };
+
+        // Append buttons to the popup
+        winPopup.appendChild(closeButton);
+        winPopup.appendChild(acceptButton);
+
+        rightSideHud.appendChild(winPopup);
     }
 
     function errorPopup() {
-        const winPopup = document.querySelector('div[style*="z-index: 1000"]');
-        if (winPopup) winPopup.remove();
+        const rightSideHud = document.getElementById('rightSideHud');
+        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
 
         const errorPopup = document.createElement('div');
-        errorPopup.style.position = 'fixed';
-        errorPopup.style.top = '50%';
-        errorPopup.style.left = '50%';
-        errorPopup.style.transform = 'translate(-50%, -50%)';
-        errorPopup.style.backgroundColor = 'white';
-        errorPopup.style.border = '2px solid black';
+        errorPopup.style.position = 'relative';
+        errorPopup.style.margin = '20px auto';
+        errorPopup.style.backgroundImage = "url('../elements/pictures/backgrounds/bulleok.jpg')";
+        errorPopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without cropping
+        errorPopup.style.backgroundRepeat = 'no-repeat';
+        errorPopup.style.backgroundPosition = 'center';
+        errorPopup.style.width = '80%';
+        errorPopup.style.height = '60%';
         errorPopup.style.padding = '20px';
-        errorPopup.style.zIndex = '1000';
         errorPopup.style.textAlign = 'center';
-        errorPopup.innerHTML = `
-                <p>Bravo</p>
-                <button onclick="closePopup()">Close</button>
-            `;
+        errorPopup.style.display = 'flex';
+        errorPopup.style.flexDirection = 'column';
+        errorPopup.style.justifyContent = 'flex-end'; // Aligns the button to the bottom
+        errorPopup.style.position = 'relative';
 
-        document.body.appendChild(errorPopup);
+        // Create the "OK" button
+        const okButton = document.createElement('button');
+        okButton.innerText = 'OK';
+        okButton.onclick = function () {
+            window.location.href = 'nextpage.html'; // Replace 'nextpage.html' with the desired page URL
+        };
+
+        // Style the "OK" button (retro Windows XP style)
+        okButton.style.position = 'absolute';
+        okButton.style.bottom = '10px';
+        okButton.style.right = '10px';
+        okButton.style.padding = '10px 20px';
+        okButton.style.fontSize = '16px';
+        okButton.style.border = '2px solid #A0A0A0';
+        okButton.style.borderRadius = '4px';
+        okButton.style.backgroundColor = '#E0E0E0';
+        okButton.style.color = 'black';
+        okButton.style.fontFamily = 'Tahoma, sans-serif';
+        okButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        okButton.style.cursor = 'pointer';
+
+        // Add hover effect for "OK" button
+        okButton.onmouseover = function () {
+            okButton.style.backgroundColor = '#D0D0D0';
+            okButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
+        };
+        okButton.onmouseout = function () {
+            okButton.style.backgroundColor = '#E0E0E0';
+            okButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        };
+
+        // Append the button to the popup
+        errorPopup.appendChild(okButton);
+
+        rightSideHud.appendChild(errorPopup);
     }
 
+
     function acceptPopup() {
-        const winPopup = document.querySelector('div[style*="z-index: 1000"]');
-        if (winPopup) winPopup.remove();
+        const rightSideHud = document.getElementById('rightSideHud');
+        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
 
         const acceptPopup = document.createElement('div');
-        acceptPopup.style.position = 'fixed';
-        acceptPopup.style.top = '50%';
-        acceptPopup.style.left = '50%';
-        acceptPopup.style.transform = 'translate(-50%, -50%)';
-        acceptPopup.style.backgroundColor = 'white';
-        acceptPopup.style.border = '2px solid black';
+        acceptPopup.style.position = 'relative';
+        acceptPopup.style.margin = '20px auto';
+        acceptPopup.style.backgroundImage = "url('../elements/pictures/backgrounds/bulle.png')";
+        acceptPopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without cropping
+        acceptPopup.style.backgroundRepeat = 'no-repeat';
+        acceptPopup.style.backgroundPosition = 'center';
+        acceptPopup.style.width = '80%';
+        acceptPopup.style.height = '60%';
         acceptPopup.style.padding = '20px';
-        acceptPopup.style.zIndex = '1000';
         acceptPopup.style.textAlign = 'center';
-        acceptPopup.innerHTML = `
-                <p>Piegé</p>
-                <button onclick="closePopup()">Close</button>
-            `;
+        acceptPopup.style.display = 'flex';
+        acceptPopup.style.flexDirection = 'column';
+        acceptPopup.style.justifyContent = 'flex-end'; // Aligns content to the bottom
+        acceptPopup.style.position = 'relative';
 
-        document.body.appendChild(acceptPopup);
+        // Create the "Close" button
+        const closeButton = document.createElement('button');
+        closeButton.innerText = 'Close';
+        closeButton.onclick = function () {
+            rightSideHud.innerHTML = ''; // Clears the popup when the button is clicked
+        };
+
+        // Style the "Close" button (retro Windows XP style)
+        closeButton.style.position = 'absolute';
+        closeButton.style.bottom = '10px';
+        closeButton.style.right = '10px';
+        closeButton.style.padding = '10px 20px';
+        closeButton.style.fontSize = '16px';
+        closeButton.style.border = '2px solid #A0A0A0';
+        closeButton.style.borderRadius = '4px';
+        closeButton.style.backgroundColor = '#E0E0E0';
+        closeButton.style.color = 'black';
+        closeButton.style.fontFamily = 'Tahoma, sans-serif';
+        closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        closeButton.style.cursor = 'pointer';
+
+        // Add hover effect for the "Close" button
+        closeButton.onmouseover = function () {
+            closeButton.style.backgroundColor = '#D0D0D0';
+            closeButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
+        };
+        closeButton.onmouseout = function () {
+            closeButton.style.backgroundColor = '#E0E0E0';
+            closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
+        };
+
+        // Add a message inside the popup
+        const message = document.createElement('p');
+        message.innerText = 'Thank you for accepting!';
+        message.style.margin = 'auto 0';
+        message.style.fontSize = '18px';
+        message.style.fontFamily = 'Tahoma, sans-serif';
+
+        // Append the message and button to the popup
+        acceptPopup.appendChild(message);
+        acceptPopup.appendChild(closeButton);
+
+        rightSideHud.appendChild(acceptPopup);
     }
 
     function closePopup() {
-        const popup = document.querySelector('div[style*="z-index: 1000"]');
-        if (popup) popup.remove();
+        const rightSideHud = document.getElementById('rightSideHud');
+        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
     }
-
 </script>
 </body>
 </html>
