@@ -34,14 +34,19 @@
                     Doodle
                 </div>
             </a>
+<<<<<<< HEAD
+            <a id="mail">
+                <div class="application">
+=======
             <a href="pages/6mail.html">
                 <div class="application" onclick="location.href='index.html'">
+>>>>>>> bb8f90be87260b61728b3345aa5b74e27b4c4f02
                     <img alt="icon" height="22px" src="elements/pictures/logo/6mail.png" width="22px">
                     6Mail
                 </div>
             </a>
-            <a href="pages/2pype.html">
-                <div class="application" onclick="location.href='pages/2pype.html'">
+            <a href="pages/2pype-old.html">
+                <div class="application" onclick="location.href='pages/2pype-old.html'">
                     <img alt="icon" height="22px" src="elements/pictures/logo/2pype.png" width="22px">
                     2Pype
                 </div>
@@ -94,7 +99,7 @@
     <div class="desktop-element" id="desktop-element-5">
         <a href="pages/2Pype.html">
             <div class="desktop-element-icon">
-                <img alt="icon" height="44px" onclick="location.href='pages/2pype.html'"
+                <img alt="icon" height="44px" onclick="location.href='pages/2pype-old.html'"
                      src="elements/pictures/logo/2pype.png" width="44px">
             </div>
             <div class="desktop-element-title">
@@ -107,6 +112,20 @@
 
 </body>
 <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const mailLink = document.getElementById('mail');
+
+        mailLink.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'pages/2pype-old.html';
+            iframe.width = '100%';
+            iframe.height = '500px';
+            iframe.style.border = 'none';
+
+            document.body.appendChild(iframe);
+        });
+    });
 
 
     document.addEventListener('DOMContentLoaded', () => {
