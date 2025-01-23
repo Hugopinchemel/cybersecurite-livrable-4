@@ -1,4 +1,5 @@
 body {
+  background-image: url(../elements/pictures/backgrounds/desktop_background.png);
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -7,8 +8,12 @@ body {
 
 .global-mail-hud {
   background-color: #c1c1c1;
-  width: 100vw;
-  height: 100vh;
+  width: 90vw;
+  height: 90vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .head-mail-hud {
@@ -26,6 +31,7 @@ body {
   width: 100%;
   height: 100%;
   .left-side-hud {
+    background-image: url(../elements/pictures/backgrounds/bagroundleftmail.png);
     width: 25%;
     background-color: #c1c1c1;
     display: flex;
@@ -36,6 +42,7 @@ body {
   }
 
   .right-side-hud {
+    background-image: url(../elements/pictures/backgrounds/backgroundmidmail.png);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +74,6 @@ body {
   height: 20%;
 }
 .mailimg {
-  width: 150px;
   height: 100px;
   &:hover {
     scale: 1.1;
@@ -82,8 +88,6 @@ body {
   }
 }
 .left-side-hud img {
-  width: 150px;
-  height: 75px;
   &:hover {
     scale: 1.1;
   }
@@ -125,6 +129,7 @@ body {
 }
 
 .first-container {
+  background-image: url(../elements/pictures/backgrounds/backgroundmidmail.png);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -223,7 +228,6 @@ body {
   display: flex;
   align-items: flex-end;
   width: 20%;
-  background-color: #c1c1c1;
 }
 
 .first-header-right div {
@@ -237,6 +241,7 @@ body {
 
 .first-content {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
   margin: 0 2vw 2vh 2vw;
   padding: 20px;
@@ -288,4 +293,35 @@ body {
 .alertok img {
   width: 600px;
   height: 400px;
+}
+
+span {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mail {
+  color: black;
+  font-size: 22px;
+}
+
+.mail p {
+  width: 80%;
+}
+
+.mail img {
+  width: 100px;
+  height: 100px;
+  margin-right: 50px;
+}
+
+.mailname {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 20px;
+  .bold {
+    font-weight: bold;
+  }
 }
