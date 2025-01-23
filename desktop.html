@@ -114,13 +114,15 @@
         const contentContainer = document.querySelector('.window-element');
 
         mailLink.addEventListener('click', () => {
-            fetch('pages/doodle.html')
-                .then(response => response.text())
-                .then(data => {
-                    contentContainer.innerHTML = data;
-                    contentContainer.classList.add('active');
-                })
-                .catch(error => console.error('Error loading the HTML file:', error));
+            const iframe = document.createElement('iframe');
+            iframe.src = 'pages/6mail.html';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.border = 'none';
+
+            contentContainer.innerHTML = '';
+            contentContainer.appendChild(iframe);
+            contentContainer.classList.add('active');
         });
 
         document.addEventListener('click', (event) => {
