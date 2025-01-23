@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const blackSquare = document.createElement('div');
+        blackSquare.className = 'black-square';
+        document.body.appendChild(blackSquare);
+
+
+        setTimeout(() => {
+            blackSquare.style.opacity = '0';
+        }, 100);
+
+        setTimeout(() => {
+            blackSquare.remove();
+        }, 1100);
+    });
+</script>
 </html>
