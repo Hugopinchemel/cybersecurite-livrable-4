@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Loading</title>
     <link href="stylesheet/reset-css.css" rel="stylesheet">
-    <link href="stylesheet/loading-css.css" rel="stylesheet">
+    <link href="stylesheet/index-css.css" rel="stylesheet">
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +27,13 @@
             preloads.forEach(href => {
                 const link = document.createElement('link');
                 link.rel = 'preload';
-                link.as = href.endsWith('.css') ? 'style' : 'document';
+                if (href.endsWith('.css')) {
+                    link.as = 'style';
+                } else if (href.endsWith('.html')) {
+                    link.as = 'document';
+                } else if (href.endsWith('.js')) {
+                    link.as = 'script';
+                }
                 link.href = href;
                 document.head.appendChild(link);
             });
@@ -36,6 +42,8 @@
                 window.location.href = 'homepage.html';
             }, 3000);
         });
+
+
     </script>
 
 

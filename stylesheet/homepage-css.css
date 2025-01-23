@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: IbmPlexMono, serif;
-
+    color: white;
 }
 
 .black-square {
@@ -55,6 +55,7 @@ body {
 }
 
 .right-div-content-row {
+    margin-right: 20px;
     gap: 5vw;
     display: flex;
     flex-direction: row;
@@ -63,8 +64,19 @@ body {
     background-color: #5a7ddb;
 }
 
+.right-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .line {
     width: 1px;
     height: 70vh;
     background: linear-gradient(#5A7EDC 0%, #91AEEE 25%, #91AEEE 75%, #5A7EDC 100%);
+}
+
+img {
+    height: 44px;
+    width: 44px;
 }
