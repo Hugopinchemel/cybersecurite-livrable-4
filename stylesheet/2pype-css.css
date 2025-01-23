@@ -17,12 +17,53 @@ body {
     grid-column: 1/2;
     grid-row: 1/5;
     background-color: #c1c1c1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
     align-items: center;
     justify-content: center;
     outline: 1px solid black;
 }
+
+.logo-2pype {
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informations {
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting {
+    grid-row: 4/5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.glossary {
+    grid-row: 5/6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
 
 .right-side-1 {
     outline: 1px solid black;
