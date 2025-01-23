@@ -1,6 +1,5 @@
 
 .global-2pype-hud {
-    background-color: #c1c1c1;
     width: 90vw;
     height: 90vh;
     margin: 5vh 5vw;
@@ -11,9 +10,11 @@
 
 
 .left-side-hud {
+    background-image: url("../elements/pictures/backgrounds/2pype-background-panel.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     grid-column: 1/2;
     grid-row: 1/5;
-    background-color: #c1c1c1;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
@@ -63,6 +64,9 @@
 
 
 .right-side-1 {
+    background-image: url("../elements/pictures/backgrounds/2pype-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     outline: 1px solid black;
     grid-column: 2/3;
     grid-row: 1/5;
@@ -111,6 +115,9 @@
 }
 
 .right-side-2 {
+    background-image: url("../elements/pictures/backgrounds/2pype-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     outline: 1px solid black;
     grid-column: 3/4;
     grid-row: 1/5;
