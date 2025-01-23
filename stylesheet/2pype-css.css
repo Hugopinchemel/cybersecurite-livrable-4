@@ -62,7 +62,6 @@ body {
 }
 
 
-
 .unusual-info {
     grid-column: 1/2;
     grid-row: 4/5;
@@ -90,7 +89,7 @@ body {
     font-size: larger;
 }
 
-.relation{
+.relation {
     grid-column: 1/2;
     grid-row: 2/3;
     display: flex;
@@ -99,7 +98,7 @@ body {
     gap: 10px;
 }
 
-.expression{
+.expression {
     grid-column: 1/2;
     grid-row: 3/4;
     display: flex;
@@ -108,6 +107,6 @@ body {
     gap: 10px;
 }
 
-.expression-text{
+.expression-text {
     max-width: 60%;
 }

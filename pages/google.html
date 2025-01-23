@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>6Mail</title>
-    <link rel="stylesheet" href="../stylesheet/reset-css.css">
-    <link rel="stylesheet" href="../stylesheet/index-css.css" />
-    <link rel="stylesheet" href="../stylesheet/font-css.css" />
-    <link rel="stylesheet" href="../stylesheet/google-css.css" />
+    <link href="../stylesheet/reset-css.css" rel="stylesheet">
+    <link href="../stylesheet/index-css.css" rel="stylesheet"/>
+    <link href="../stylesheet/font-css.css" rel="stylesheet"/>
+    <link href="../stylesheet/google-css.css" rel="stylesheet"/>
 <body>
 <div class="global-mail-hud">
     <div class="separate-mail-hud">
         <div class="left-side-hud">
-            <div><img src="../elements/pictures/buttons/doodle.svg" alt="Info" width="100"></div>
-            <div><img src="../elements/pictures/buttons/home.png" alt="Menu" width="100"></div>
-            <div><img src="../elements/pictures/buttons/parametre.png" alt="Paramètres" width="100"></div>
-            <div><img src="../elements/pictures/buttons/info.svg" alt="Info" width="100"></div>
+            <div><img alt="Info" src="../elements/pictures/buttons/doodle.svg" width="100"></div>
+            <div><img alt="Menu" src="../elements/pictures/buttons/home.png" width="100"></div>
+            <div><img alt="Paramètres" src="../elements/pictures/buttons/parametre.png" width="100"></div>
+            <div><img alt="Info" src="../elements/pictures/buttons/info.svg" width="100"></div>
         </div>
         <div class="right-side-hud" id="rightSideHud">
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search Google...">
+                <input id="searchInput" placeholder="Search Google..." type="text">
                 <button onclick="performSearch()">Search</button>
             </div>
             <ul class="results" id="resultsList">
@@ -47,11 +47,31 @@
 
         // Simulate results with descriptions and URLs
         const sources = [
-            { title: `Wikipedia - ${query}`, url: 'https://www.wikipedia.org', description: `Find information about ${query} on Wikipedia.` },
-            { title: `${query} News - Sud Ouest`, url: 'https://www.sudouest.fr', description: `Latest news about ${query} from Sud Ouest.` },
-            { title: `${query} - Official Page`, url: 'https://www.officialsite.com', description: `The official page for ${query}.` },
-            { title: `${query} Reviews - TrustPilot`, url: 'https://www.trustpilot.com', description: `Check reviews about ${query} on TrustPilot.` },
-            { title: `${query} Forum Discussions`, url: 'https://www.forum.com', description: `Join discussions about ${query} on this forum.` }
+            {
+                title: `Wikipedia - ${query}`,
+                url: 'https://www.wikipedia.org',
+                description: `Find information about ${query} on Wikipedia.`
+            },
+            {
+                title: `${query} News - Sud Ouest`,
+                url: 'https://www.sudouest.fr',
+                description: `Latest news about ${query} from Sud Ouest.`
+            },
+            {
+                title: `${query} - Official Page`,
+                url: 'https://www.officialsite.com',
+                description: `The official page for ${query}.`
+            },
+            {
+                title: `${query} Reviews - TrustPilot`,
+                url: 'https://www.trustpilot.com',
+                description: `Check reviews about ${query} on TrustPilot.`
+            },
+            {
+                title: `${query} Forum Discussions`,
+                url: 'https://www.forum.com',
+                description: `Join discussions about ${query} on this forum.`
+            }
         ];
 
         sources.forEach(source => {
