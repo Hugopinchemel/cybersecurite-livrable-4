@@ -5,11 +5,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>6Mail</title>
     <link href="../stylesheet/reset-css.css" rel="stylesheet">
-    <link href="../stylesheet/index-css.css" rel="stylesheet"/>
     <link href="../stylesheet/font-css.css" rel="stylesheet"/>
     <link href="../stylesheet/google-css.css" rel="stylesheet"/>
 <body>
 <div class="global-mail-hud">
+
     <div class="separate-mail-hud">
         <div class="left-side-hud">
             <div><img alt="Info" src="../elements/pictures/buttons/doodle.svg" width="100"></div>
@@ -256,45 +256,29 @@
         errorPopup.style.textAlign = 'center';
         errorPopup.style.display = 'flex';
         errorPopup.style.flexDirection = 'column';
-        errorPopup.style.justifyContent = 'flex-end'; // Aligns the button to the bottom
-        errorPopup.style.position = 'relative';
+        errorPopup.style.justifyContent = 'center'; // Aligns content to the center
+        errorPopup.style.cursor = 'pointer'; // Changes cursor to indicate it's clickable
 
-        // Create the "OK" button
-        const okButton = document.createElement('button');
-        okButton.innerText = 'OK';
-        okButton.onclick = function () {
-            window.location.href = 'nextpage.html'; // Replace 'nextpage.html' with the desired page URL
+        // Add an onclick event to the popup to redirect when clicked
+        errorPopup.onclick = function () {
+            window.location.href = 'nextpage.html'; // Replace 'nextpage.html' with your desired URL
         };
 
-        // Style the "OK" button (retro Windows XP style)
-        okButton.style.position = 'absolute';
-        okButton.style.bottom = '10px';
-        okButton.style.right = '10px';
-        okButton.style.padding = '10px 20px';
-        okButton.style.fontSize = '16px';
-        okButton.style.border = '2px solid #A0A0A0';
-        okButton.style.borderRadius = '4px';
-        okButton.style.backgroundColor = '#E0E0E0';
-        okButton.style.color = 'black';
-        okButton.style.fontFamily = 'Tahoma, sans-serif';
-        okButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
-        okButton.style.cursor = 'pointer';
+        // Add a message inside the popup (optional)
+        const message = document.createElement('p');
+        message.innerText = 'An error occurred. Click here to proceed.';
+        message.style.margin = 'auto 0';
+        message.style.fontSize = '18px';
+        message.style.fontFamily = 'Tahoma, sans-serif';
+        message.style.color = 'white';
+        message.style.textShadow = '1px 1px 2px black';
 
-        // Add hover effect for "OK" button
-        okButton.onmouseover = function () {
-            okButton.style.backgroundColor = '#D0D0D0';
-            okButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
-        };
-        okButton.onmouseout = function () {
-            okButton.style.backgroundColor = '#E0E0E0';
-            okButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
-        };
-
-        // Append the button to the popup
-        errorPopup.appendChild(okButton);
+        // Append the message to the popup
+        errorPopup.appendChild(message);
 
         rightSideHud.appendChild(errorPopup);
     }
+
 
 
     function acceptPopup() {
@@ -314,58 +298,34 @@
         acceptPopup.style.textAlign = 'center';
         acceptPopup.style.display = 'flex';
         acceptPopup.style.flexDirection = 'column';
-        acceptPopup.style.justifyContent = 'flex-end'; // Aligns content to the bottom
-        acceptPopup.style.position = 'relative';
+        acceptPopup.style.justifyContent = 'center'; // Aligns content to the center
+        acceptPopup.style.cursor = 'pointer'; // Changes the cursor to indicate it's clickable
 
-        // Create the "Close" button
-        const closeButton = document.createElement('button');
-        closeButton.innerText = 'Close';
-        closeButton.onclick = function () {
-            rightSideHud.innerHTML = ''; // Clears the popup when the button is clicked
+        // Add an onclick event to redirect when the image is clicked
+        acceptPopup.onclick = function () {
+            window.location.href = 'target-page.html'; // Replace 'target-page.html' with your destination URL
         };
 
-        // Style the "Close" button (retro Windows XP style)
-        closeButton.style.position = 'absolute';
-        closeButton.style.bottom = '10px';
-        closeButton.style.right = '10px';
-        closeButton.style.padding = '10px 20px';
-        closeButton.style.fontSize = '16px';
-        closeButton.style.border = '2px solid #A0A0A0';
-        closeButton.style.borderRadius = '4px';
-        closeButton.style.backgroundColor = '#E0E0E0';
-        closeButton.style.color = 'black';
-        closeButton.style.fontFamily = 'Tahoma, sans-serif';
-        closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
-        closeButton.style.cursor = 'pointer';
-
-        // Add hover effect for the "Close" button
-        closeButton.onmouseover = function () {
-            closeButton.style.backgroundColor = '#D0D0D0';
-            closeButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
-        };
-        closeButton.onmouseout = function () {
-            closeButton.style.backgroundColor = '#E0E0E0';
-            closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
-        };
-
-        // Add a message inside the popup
+        // Add a message inside the popup (optional)
         const message = document.createElement('p');
-        message.innerText = 'Thank you for accepting!';
         message.style.margin = 'auto 0';
         message.style.fontSize = '18px';
         message.style.fontFamily = 'Tahoma, sans-serif';
+        message.style.color = 'white';
+        message.style.textShadow = '1px 1px 2px black';
 
-        // Append the message and button to the popup
+        // Append the message to the popup
         acceptPopup.appendChild(message);
-        acceptPopup.appendChild(closeButton);
 
         rightSideHud.appendChild(acceptPopup);
     }
+
 
     function closePopup() {
         const rightSideHud = document.getElementById('rightSideHud');
         rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
     }
+    
 </script>
 </body>
 </html>
