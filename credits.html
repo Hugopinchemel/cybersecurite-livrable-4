@@ -2,64 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Crédit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crédits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<div class="display">
-    <div class="black-square"></div>
-    <div class="screen-background">
-        <div class="content">
-            <div class="left-div">
-                <div class="left-div-content">
-                    <div>
-                        <img alt="logo bigrosoft" src="elements/pictures/bigrosoft.png" width="100">
-                    </div>
-                    <div>
-                        Pour commencer,
-                    </div>
-                    <div>
-                        cliquez sur votre nom d'utilisateur
-                    </div>
-                </div>
-            </div>
-            <div class="line"></div>
-            <div class="right-div">
-                <div class="right-div-content-row">
-                    <div>
-                        <img alt="profile picture" src="elements/pictures/profile/Sprite-0003 1.png">
-                    </div>
-                    <div>
-                        <a class="changeColorLink" onclick="transition()">Jouer</a>
-                    </div>
-                </div>
-                <div class="right-div-content-row">
-                    <div>
-                        image
-                    </div>
-                    <div>
-                        <a class="changeColorLink" onclick="transition_credits()">crédits</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+<div class="content">
+    <h1>Crédits</h1>
+    <p>Nous tenons à remercier les personnes et les ressources qui ont contribué à ce projet :</p>
+    
+    <h2>Contributeurs</h2>
+    <ul>
+        <li><strong>Equipe strat :</strong></li>
+        <br>
+        <li><strong>Bastien BETAT</strong> - Chef du projet</li>
+        <li><strong>Esthebann VOLLÉ</strong> - Écriture</li>
+        <br>
+        <li><strong>Equipe dev :</strong></li>
+        <br>
+        <li><strong>Kilian BENEY</strong> - Développeur Frontend</li>
+        <li><strong>Lucas JUILLAT</strong> - Développeur Frontend</li>
+        <li><strong>Lucas LE GOFF</strong> - Développeur Frontend</li>
+        <li><strong>Hugo PINCHEMEL</strong> - Développeur Frontend</li>
+        <br>
+        <li><strong>Equipe créa :</strong></li>
+        <br>
+        <li><strong>Adrian DELGADO</strong> - Designer UX/UI</li>
+        <li><strong>Noah LABORDE</strong> - Designer UX/UI</li>       
+        <li><strong>Gabriel BISSON--BARRET</strong> - Designer UX/UI</li>
+        <br>
+    </ul>
+
+    <h2>Ressources Utilisées</h2>
+    <ul>
+        <li>Logo : <a href="https://bigrosoft.com" target="_blank">Bigrosoft</a></li>
+        <li>Images de profil : <a href="https://unsplash.com" target="_blank">Unsplash</a></li>
+        <li>Bibliothèques JavaScript : <a href="https://threejs.org" target="_blank">Three.js</a></li>
+    </ul>
+    
+    <h2>Remerciements Spéciaux</h2>
+    <p>Un grand merci à tous les utilisateurs et testeurs qui ont fourni des retours précieux pour améliorer notre application.</p>
 </div>
+
 </body>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const blackSquare = document.createElement('div');
-        blackSquare.className = 'black-square';
-        document.body.appendChild(blackSquare);
-
-
-        setTimeout(() => {
-            blackSquare.style.opacity = '0';
-        }, 100);
-
-        setTimeout(() => {
-            blackSquare.remove();
-        }, 1100);
-    });
-</script>
 </html>

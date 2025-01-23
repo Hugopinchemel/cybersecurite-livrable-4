@@ -24,12 +24,48 @@ document.querySelectorAll(".mail").forEach(function (div) {
     });
 
     div.removeEventListener("click", clickHandler);
-    div.style.background = "red";
+    div.style.background = "rgba(0, 0, 0, 0.5)";
     div.style.pointerEvents = "none";
   };
 
   div.addEventListener("click", clickHandler);
 });
+
+document
+  .querySelector(".third .first-content span")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    Swal.fire({
+      title: "Information",
+      text: "Ce lien redirige bien vers la page EDF.",
+      icon: "info",
+      confirmButtonText: "OK",
+    });
+  });
+
+document
+  .querySelector(".second .first-content span")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    Swal.fire({
+      title: "Erreur",
+      text: "Ce lien ne redirige pas vers la Fnac.",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
+  });
+
+document
+  .querySelector(".fourth .first-content span")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    Swal.fire({
+      title: "Erreur",
+      text: "Ce lien ne réinitialise pas le mot de passe.",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
+  });
 
 document.querySelectorAll(".mail").forEach(function (div) {
   div.addEventListener("click", function () {
@@ -81,7 +117,7 @@ document.querySelectorAll(".good").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -98,7 +134,7 @@ document.querySelectorAll(".good").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -115,7 +151,7 @@ document.querySelectorAll(".good").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -132,7 +168,7 @@ document.querySelectorAll(".good").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -149,7 +185,7 @@ document.querySelectorAll(".good").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -176,7 +212,7 @@ document.querySelectorAll(".false").forEach(function (div) {
           greatDiv.addEventListener("click", function () {
             greatDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -193,7 +229,7 @@ document.querySelectorAll(".false").forEach(function (div) {
           greatDiv.addEventListener("click", function () {
             greatDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -210,7 +246,7 @@ document.querySelectorAll(".false").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -227,7 +263,7 @@ document.querySelectorAll(".false").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
@@ -244,7 +280,7 @@ document.querySelectorAll(".false").forEach(function (div) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
             document.querySelectorAll(".mail").forEach(function (mailDiv) {
-              mailDiv.style.display = "block";
+              mailDiv.style.display = "flex";
             });
             context = null;
           });
