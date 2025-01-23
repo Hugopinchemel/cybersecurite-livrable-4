@@ -120,21 +120,6 @@ document.querySelectorAll(".good").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -152,21 +137,6 @@ document.querySelectorAll(".good").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -184,21 +154,6 @@ document.querySelectorAll(".good").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -216,21 +171,6 @@ document.querySelectorAll(".good").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -248,21 +188,6 @@ document.querySelectorAll(".good").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -290,21 +215,6 @@ document.querySelectorAll(".false").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -322,21 +232,6 @@ document.querySelectorAll(".false").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -354,21 +249,6 @@ document.querySelectorAll(".false").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -386,21 +266,6 @@ document.querySelectorAll(".false").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
@@ -418,21 +283,6 @@ document.querySelectorAll(".false").forEach(function (div) {
               mailDiv.style.display = "flex";
             });
             context = null;
-            if (
-              document.querySelectorAll(".mail[style*='pointer-events: none']")
-                .length === 5
-            ) {
-              Swal.fire({
-                title: "Félicitations",
-                text: "Vous avez terminé ce mini-jeu !",
-                icon: "success",
-                confirmButtonText: "OK",
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
-                }
-              });
-            }
           });
         });
         break;
