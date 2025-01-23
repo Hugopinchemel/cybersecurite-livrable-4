@@ -13,7 +13,7 @@
 
     <div class="task-bar"></div>
     <div class="start">
-        <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
+        <img alt="icon" height="22px" src="elements/pictures/bigrosoft.png" width="22px">
         Commencer
     </div>
 
@@ -51,8 +51,9 @@
             <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
             Déconnecter
         </div>
-
     </div>
+
+    <div class="window-element"></div>
 
 
     <div class="desktop-element" id="desktop-element-1">
@@ -103,39 +104,32 @@
         </a>
     </div>
 </div>
-</div>
+
 
 </body>
 <script>
 
     document.addEventListener('DOMContentLoaded', () => {
         const mailLink = document.getElementById('mail');
+        const contentContainer = document.querySelector('.window-element');
 
         mailLink.addEventListener('click', () => {
-            const iframe = document.createElement('iframe');
-            iframe.src = 'pages/2pype-old.html';
-            iframe.width = '100%';
-            iframe.height = '500px';
-            iframe.style.border = 'none';
+            fetch('pages/doodle.html')
+                .then(response => response.text())
+                .then(data => {
+                    contentContainer.innerHTML = data;
+                    contentContainer.classList.add('active');
+                })
+                .catch(error => console.error('Error loading the HTML file:', error));
+        });
 
-            document.body.appendChild(iframe);
+        document.addEventListener('click', (event) => {
+            if (!contentContainer.contains(event.target) && !mailLink.contains(event.target)) {
+                contentContainer.classList.remove('active');
+            }
         });
     });
 
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const mailLink = document.getElementById('mail');
-
-        mailLink.addEventListener('click', () => {
-            const iframe = document.createElement('iframe');
-            iframe.src = 'pages/2pype-old.html';
-            iframe.width = '100%';
-            iframe.height = '500px';
-            iframe.style.border = 'none';
-
-            document.body.appendChild(iframe);
-        });
-    });
 
 
     document.addEventListener('DOMContentLoaded', () => {
