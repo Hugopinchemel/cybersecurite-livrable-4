@@ -15,14 +15,20 @@ document.querySelectorAll(".alertok").forEach(function (great) {
 });
 
 document.querySelectorAll(".mail").forEach(function (div) {
-  div.addEventListener("click", function () {
+  const clickHandler = function () {
     context = div.getAttribute("data-context");
     console.log(context);
 
     document.querySelectorAll(".mail").forEach(function (mailDiv) {
       mailDiv.style.display = "none";
     });
-  });
+
+    div.removeEventListener("click", clickHandler);
+    div.style.background = "red";
+    div.style.pointerEvents = "none";
+  };
+
+  div.addEventListener("click", clickHandler);
 });
 
 document.querySelectorAll(".mail").forEach(function (div) {
@@ -65,9 +71,6 @@ document.querySelectorAll(".good").forEach(function (div) {
   div.addEventListener("click", function () {
     switch (context) {
       case "mail1":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".first").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
@@ -77,14 +80,14 @@ document.querySelectorAll(".good").forEach(function (div) {
         document.querySelectorAll(".problem1").forEach(function (problemDiv) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail2":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".second").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
@@ -94,57 +97,60 @@ document.querySelectorAll(".good").forEach(function (div) {
         document.querySelectorAll(".problem2").forEach(function (problemDiv) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail3":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".third").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
-        document.querySelectorAll(".great3").forEach(function (greatDiv) {
-          greatDiv.style.display = "block";
+        document.querySelectorAll(".great3").forEach(function (problemDiv) {
+          problemDiv.style.display = "block";
         });
-        document.querySelectorAll(".great3").forEach(function (greatDiv) {
-          greatDiv.addEventListener("click", function () {
-            greatDiv.style.display = "none";
+        document.querySelectorAll(".great3").forEach(function (problemDiv) {
+          problemDiv.addEventListener("click", function () {
+            problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail4":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".fourth").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
-        document.querySelectorAll(".great4").forEach(function (greatDiv) {
-          greatDiv.style.display = "block";
+        document.querySelectorAll(".problem4").forEach(function (problemDiv) {
+          problemDiv.style.display = "block";
         });
-        document.querySelectorAll(".great4").forEach(function (greatDiv) {
-          greatDiv.addEventListener("click", function () {
-            greatDiv.style.display = "none";
+        document.querySelectorAll(".problem4").forEach(function (problemDiv) {
+          problemDiv.addEventListener("click", function () {
+            problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail5":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".fifth").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
-        document.querySelectorAll(".great5").forEach(function (greatDiv) {
-          greatDiv.style.display = "block";
+        document.querySelectorAll(".problem5").forEach(function (problemDiv) {
+          problemDiv.style.display = "block";
         });
-        document.querySelectorAll(".great5").forEach(function (greatDiv) {
-          greatDiv.addEventListener("click", function () {
-            greatDiv.style.display = "none";
+        document.querySelectorAll(".problem5").forEach(function (problemDiv) {
+          problemDiv.addEventListener("click", function () {
+            problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
@@ -160,9 +166,6 @@ document.querySelectorAll(".false").forEach(function (div) {
   div.addEventListener("click", function () {
     switch (context) {
       case "mail1":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".first").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
@@ -172,14 +175,14 @@ document.querySelectorAll(".false").forEach(function (div) {
         document.querySelectorAll(".great1").forEach(function (greatDiv) {
           greatDiv.addEventListener("click", function () {
             greatDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail2":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".second").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
@@ -189,14 +192,14 @@ document.querySelectorAll(".false").forEach(function (div) {
         document.querySelectorAll(".great2").forEach(function (greatDiv) {
           greatDiv.addEventListener("click", function () {
             greatDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail3":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".third").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
@@ -206,14 +209,14 @@ document.querySelectorAll(".false").forEach(function (div) {
         document.querySelectorAll(".problem3").forEach(function (problemDiv) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail4":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".fourth").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
@@ -223,23 +226,26 @@ document.querySelectorAll(".false").forEach(function (div) {
         document.querySelectorAll(".problem4").forEach(function (problemDiv) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
         break;
       case "mail5":
-        document.querySelectorAll(".mail").forEach(function (mailDiv) {
-          mailDiv.style.display = "block";
-        });
         document.querySelectorAll(".fifth").forEach(function (mailHUD) {
           mailHUD.style.display = "none";
         });
-        document.querySelectorAll(".problem5").forEach(function (problemDiv) {
+        document.querySelectorAll(".great5").forEach(function (problemDiv) {
           problemDiv.style.display = "block";
         });
-        document.querySelectorAll(".problem5").forEach(function (problemDiv) {
+        document.querySelectorAll(".great5").forEach(function (problemDiv) {
           problemDiv.addEventListener("click", function () {
             problemDiv.style.display = "none";
+            document.querySelectorAll(".mail").forEach(function (mailDiv) {
+              mailDiv.style.display = "block";
+            });
             context = null;
           });
         });
