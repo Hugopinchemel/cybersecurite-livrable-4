@@ -1,14 +1,14 @@
 body {
-< < < < < < < HEAD background-image: url(../elements/pictures/backgrounds/contour.png);
+    background-image: url(../elements/pictures/backgrounds/contour.png);
     background-size: cover;
     width: 100vw;
     height: 100vh;
     background-image: url(../elements/pictures/backgrounds/desktop_background.jpg);
-= = = = = = = width: 100 vw;
+    width: 100 vw;
     height: 100vh;
     margin: 0;
     padding: 0;
->>> >>> > bb8f90be87260b61728b3345aa5b74e27b4c4f02
+
 }
 
 .global-mail-hud {
@@ -74,14 +74,6 @@ body {
     height: 20%;
 }
 
-<
-<
-<
-<
-<
-<
-<
-HEAD
 .mailimg {
     width: 150px;
     height: 100px;
@@ -309,7 +301,7 @@ HEAD
         height: 400px;
     }
 
-= = = = = = = . left-side-hud . otherimg {
+    .left-side-hud.otherimg {
     width: 150px;
     height: 75px;
 
@@ -527,5 +519,4 @@ HEAD
         width: 600px;
         height: 400px;
     }
-
->>> >>> > bb8f90be87260b61728b3345aa5b74e27b4c4f02
+}
