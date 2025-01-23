@@ -14,13 +14,13 @@
     <div class="task-bar"></div>
     <div class="start">
         <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
-        Start
+        Commencer
     </div>
 
     <div class="start-menu">
 
         <div class="menu-title">
-            User
+            Utilisateur
         </div>
 
         <div class="applications-list">
@@ -34,14 +34,14 @@
                     Doodle
                 </div>
             </a>
-            <a href="pages/6mail.html">
-                <div class="application" onclick="location.href='index.html'">
+            <a id="mail">
+                <div class="application">
                     <img alt="icon" height="22px" src="elements/pictures/logo/6mail.png" width="22px">
                     6Mail
                 </div>
             </a>
-            <a href="pages/2pype.html">
-                <div class="application" onclick="location.href='pages/2pype.html'">
+            <a href="pages/2pype-old.html">
+                <div class="application" onclick="location.href='pages/2pype-old.html'">
                     <img alt="icon" height="22px" src="elements/pictures/logo/2pype.png" width="22px">
                     2Pype
                 </div>
@@ -94,7 +94,7 @@
     <div class="desktop-element" id="desktop-element-5">
         <a href="pages/2Pype.html">
             <div class="desktop-element-icon">
-                <img alt="icon" height="44px" onclick="location.href='pages/2pype.html'"
+                <img alt="icon" height="44px" onclick="location.href='pages/2pype-old.html'"
                      src="elements/pictures/logo/2pype.png" width="44px">
             </div>
             <div class="desktop-element-title">
@@ -103,10 +103,39 @@
         </a>
     </div>
 </div>
-
+</div>
 
 </body>
 <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const mailLink = document.getElementById('mail');
+
+        mailLink.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'pages/2pype-old.html';
+            iframe.width = '100%';
+            iframe.height = '500px';
+            iframe.style.border = 'none';
+
+            document.body.appendChild(iframe);
+        });
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const mailLink = document.getElementById('mail');
+
+        mailLink.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'pages/2pype-old.html';
+            iframe.width = '100%';
+            iframe.height = '500px';
+            iframe.style.border = 'none';
+
+            document.body.appendChild(iframe);
+        });
+    });
 
 
     document.addEventListener('DOMContentLoaded', () => {

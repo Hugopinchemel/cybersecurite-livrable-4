@@ -1,0 +1,85 @@
+body {
+    background-image: url(../elements/pictures/backgrounds/desktop_background.jpg);
+}
+
+.global-2pype-hud {
+    background-color: lightgray;
+
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh 5vw;
+}
+
+.head-2pype-hud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    height: 5%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.separate-2pype-hud {
+    display: flex;
+    width: 100%;
+    height: 95%;
+
+    .left-side-hud {
+        width: 25%;
+        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+    }
+
+    .center-side-hud {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+        background-color: lightgray;
+        border: 1px solid black;
+    }
+
+    .right-side-hud {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        width: 75%;
+        background-color: lightgray;
+        border: 1px solid black;
+    }
+}
+
+.profile-side-hud div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+}
+
+.right-side-hud div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+}
+
+.left-side-hud div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.bold {
+    font-weight: bold;
+}
