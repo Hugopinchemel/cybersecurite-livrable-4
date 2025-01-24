@@ -79,12 +79,12 @@ body {
     background: linear-gradient(#5A7EDC 0%, #91AEEE 25%, #91AEEE 75%, #5A7EDC 100%);
 }
 
-img {
+.profile-picture {
     height: 88px;
     width: 88px;
 }
 
-.left-div-content img {
-    height: 176px;
-    width: 176px;
+.logo-decrypt {
+    height: 100px;
+    width: 386px;
 }
