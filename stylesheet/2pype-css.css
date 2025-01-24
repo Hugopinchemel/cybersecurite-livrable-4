@@ -167,7 +167,8 @@
     grid-template-rows: 5% 25% 10% 35% 20% 5%;
     justify-items: center;
     align-items: center;
-    background-image: url("../elements/pictures/backgrounds/2pype-background.png");
+    background-image: url("../elements/pictures/backgrounds/2pype-background-call.png");
+    color: white;
 }
 
 .profile-picture-call {
@@ -209,10 +210,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    background-color: white;
-    padding: 20px;
-    border: 2px solid black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .overlay {

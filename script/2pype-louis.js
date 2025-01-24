@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const rightSide1 = document.querySelector('.right-side-1');
   const rightSide2 = document.querySelector('.right-side-2');
   const call = document.querySelector('.call');
-  const btnTrustPaul = document.getElementById('btn-trust-paul');
-  const btnNoTrustPaul = document.getElementById('btn-no-trust-paul');
+  const btnTrustLouis = document.getElementById('btn-trust-louis');
+  const btnNoTrustLouis = document.getElementById('btn-no-trust-louis');
   const alertTrust = document.getElementById('trust');
-  const alertPaul = document.getElementById('Alert-Paul');
+  const alertLouis = document.getElementById('Alert-Louis');
 
   nextBtn.addEventListener('click', () => {
     rightSide1.style.display = 'none';
@@ -14,11 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
     call.style.display = 'grid';
   });
 
-  btnTrustPaul.addEventListener('click', () => {
+  btnTrustLouis.addEventListener('click', () => {
     alertTrust.style.display = 'block';
   });
 
-  btnNoTrustPaul.addEventListener('click', () => {
-    alertPaul.style.display = 'block';
+  btnNoTrustLouis.addEventListener('click', () => {
+    alertLouis.style.display = 'block';
+  });
+
+  alertTrust.addEventListener('click', () => {
+    window.location.href = '../../desktop.html';
+  });
+
+  alertLouis.addEventListener('click', () => {
+    window.location.href = '../../desktop.html';
   });
 });

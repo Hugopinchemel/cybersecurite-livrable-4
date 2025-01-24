@@ -21,4 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
   btnNoTrustPaul.addEventListener('click', () => {
     alertPaul.style.display = 'block';
   });
+
+  alertTrust.addEventListener('click', () => {
+    window.location.href = '2pype-maman.html';
+  });
+
+  alertPaul.addEventListener('click', () => {
+    window.location.href = '2pype-maman.html';
+  });
 });
