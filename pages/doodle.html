@@ -23,7 +23,6 @@
                 <button onclick="performSearch()">Search</button>
             </div>
             <ul class="results" id="resultsList">
-                <!-- Search results will appear here -->
             </ul>
         </div>
 
@@ -37,7 +36,6 @@
         const query = document.getElementById('searchInput').value;
         const resultsList = document.getElementById('resultsList');
 
-        // Clear previous results
         resultsList.innerHTML = '';
 
         if (query.trim() === '') {
@@ -45,7 +43,6 @@
             return;
         }
 
-        // Simulate results with descriptions and URLs
         const sources = [
             {
                 title: `Wikipedia - ${query}`,
@@ -71,6 +68,32 @@
                 title: `${query} Forum Discussions`,
                 url: 'https://www.forum.com',
                 description: `Join discussions about ${query} on this forum.`
+            },
+            // Faux liens ajoutés
+            {
+                title: `FauxSite - ${query}`,
+                url: 'https://www.fauxsite.com',
+                description: `A completely fake site about ${query}.`
+            },
+            {
+                title: `Imaginary Resources for ${query}`,
+                url: 'https://www.imaginaryresources.com',
+                description: `Find made-up resources for ${query} here.`
+            },
+            {
+                title: `${query} Myths and Legends`,
+                url: 'https://www.mythsandlegends.com',
+                description: `Explore myths and legends about ${query}.`
+            },
+            {
+                title: `Super Fake News - ${query}`,
+                url: 'https://www.superfakenews.com',
+                description: `Read the most unreliable news about ${query}.`
+            },
+            {
+                title: `The Ultimate Guide to ${query}`,
+                url: 'https://www.ultimateguide.com',
+                description: `Everything you need to know about ${query}, but totally made up.`
             }
         ];
 
@@ -80,9 +103,9 @@
             const url = document.createElement('div');
             const description = document.createElement('div');
 
-            link.href = '#'; // Prevent default link navigation
+            link.href = '#';
             link.textContent = source.title;
-            link.onclick = () => showCookiePopup(); // Show cookie popup on click
+            link.onclick = () => showCookiePopup();
 
             url.textContent = source.url;
             url.className = 'url';
@@ -97,18 +120,24 @@
         });
     }
 
+
     function showCookiePopup() {
         const rightSideHud = document.getElementById('rightSideHud');
-        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
+        rightSideHud.innerHTML = '';
+
+
+        rightSideHud.style.backgroundImage = "url('../elements/pictures/backgrounds/sitefond.png')";
+        rightSideHud.style.backgroundSize = 'cover';
+        rightSideHud.style.backgroundRepeat = 'no-repeat';
+        rightSideHud.style.backgroundPosition = 'center';
 
         const cookiePopup = document.createElement('div');
         cookiePopup.style.position = 'relative';
         cookiePopup.style.margin = '20px auto';
-        cookiePopup.style.backgroundColor = 'white';
         cookiePopup.style.borderRadius = '10px';
         cookiePopup.style.backgroundImage = "url('../elements/pictures/backgrounds/cookie.png')";
-        cookiePopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without being cropped
-        cookiePopup.style.backgroundRepeat = 'no-repeat'; // Prevents the image from repeating
+        cookiePopup.style.backgroundSize = 'contain';
+        cookiePopup.style.backgroundRepeat = 'no-repeat';
         cookiePopup.style.backgroundPosition = 'center';
         cookiePopup.style.width = '80%';
         cookiePopup.style.height = '60%';
@@ -119,15 +148,14 @@
         cookiePopup.style.justifyContent = 'space-between';
         cookiePopup.style.position = 'relative';
 
-        // Add the button
+
         const acceptButton = document.createElement('button');
         acceptButton.innerText = 'Accept';
         acceptButton.onclick = acceptCookies;
 
-        // Style the button (retro Windows XP style)
         acceptButton.style.position = 'absolute';
-        acceptButton.style.bottom = '10px'; // Position inside the image
-        acceptButton.style.right = '10px'; // Position inside the image
+        acceptButton.style.bottom = '10px';
+        acceptButton.style.right = '10px';
         acceptButton.style.padding = '10px 20px';
         acceptButton.style.fontSize = '16px';
         acceptButton.style.border = '2px solid #A0A0A0';
@@ -138,7 +166,7 @@
         acceptButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
         acceptButton.style.cursor = 'pointer';
 
-        // Add hover effect (subtle glow)
+
         acceptButton.onmouseover = function () {
             acceptButton.style.backgroundColor = '#D0D0D0';
             acceptButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
@@ -154,15 +182,16 @@
     }
 
 
+
     function acceptCookies() {
         const rightSideHud = document.getElementById('rightSideHud');
-        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
+        rightSideHud.innerHTML = '';
 
         const winPopup = document.createElement('div');
         winPopup.style.position = 'relative';
         winPopup.style.margin = '20px auto';
         winPopup.style.backgroundImage = "url('../elements/pictures/backgrounds/iphone.png')";
-        winPopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without cropping
+        winPopup.style.backgroundSize = 'contain';
         winPopup.style.backgroundRepeat = 'no-repeat';
         winPopup.style.backgroundPosition = 'center';
         winPopup.style.width = '80%';
@@ -171,15 +200,13 @@
         winPopup.style.textAlign = 'center';
         winPopup.style.display = 'flex';
         winPopup.style.flexDirection = 'column';
-        winPopup.style.justifyContent = 'flex-end'; // Align buttons to the bottom
+        winPopup.style.justifyContent = 'flex-end';
         winPopup.style.position = 'relative';
 
-        // Create the "Close" button
         const closeButton = document.createElement('button');
         closeButton.innerText = 'Close';
         closeButton.onclick = errorPopup;
 
-        // Style the "Close" button (retro Windows XP style)
         closeButton.style.position = 'absolute';
         closeButton.style.bottom = '10px';
         closeButton.style.left = '10px';
@@ -193,7 +220,7 @@
         closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
         closeButton.style.cursor = 'pointer';
 
-        // Add hover effect for "Close" button
+
         closeButton.onmouseover = function () {
             closeButton.style.backgroundColor = '#D0D0D0';
             closeButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
@@ -203,12 +230,12 @@
             closeButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
         };
 
-        // Create the "Accept" button
+
         const acceptButton = document.createElement('button');
         acceptButton.innerText = 'Accept';
         acceptButton.onclick = acceptPopup;
 
-        // Style the "Accept" button (retro Windows XP style)
+
         acceptButton.style.position = 'absolute';
         acceptButton.style.bottom = '10px';
         acceptButton.style.right = '10px';
@@ -222,7 +249,7 @@
         acceptButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
         acceptButton.style.cursor = 'pointer';
 
-        // Add hover effect for "Accept" button
+
         acceptButton.onmouseover = function () {
             acceptButton.style.backgroundColor = '#D0D0D0';
             acceptButton.style.boxShadow = '2px 2px 8px rgba(0, 0, 0, 0.4), -1px -1px 2px white inset';
@@ -256,15 +283,14 @@
         errorPopup.style.textAlign = 'center';
         errorPopup.style.display = 'flex';
         errorPopup.style.flexDirection = 'column';
-        errorPopup.style.justifyContent = 'center'; // Aligns content to the center
-        errorPopup.style.cursor = 'pointer'; // Changes cursor to indicate it's clickable
+        errorPopup.style.justifyContent = 'center';
+        errorPopup.style.cursor = 'pointer';
 
-        // Add an onclick event to the popup to redirect when clicked
+
         errorPopup.onclick = function () {
-            window.location.href = 'nextpage.html'; // Replace 'nextpage.html' with your desired URL
+            window.location.href = '../desktop.html';
         };
 
-        // Add a message inside the popup (optional)
         const message = document.createElement('p');
         message.innerText = 'An error occurred. Click here to proceed.';
         message.style.margin = 'auto 0';
@@ -273,7 +299,7 @@
         message.style.color = 'white';
         message.style.textShadow = '1px 1px 2px black';
 
-        // Append the message to the popup
+
         errorPopup.appendChild(message);
 
         rightSideHud.appendChild(errorPopup);
@@ -283,13 +309,13 @@
 
     function acceptPopup() {
         const rightSideHud = document.getElementById('rightSideHud');
-        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
+        rightSideHud.innerHTML = '';
 
         const acceptPopup = document.createElement('div');
         acceptPopup.style.position = 'relative';
         acceptPopup.style.margin = '20px auto';
         acceptPopup.style.backgroundImage = "url('../elements/pictures/backgrounds/bulle.png')";
-        acceptPopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without cropping
+        acceptPopup.style.backgroundSize = 'contain';
         acceptPopup.style.backgroundRepeat = 'no-repeat';
         acceptPopup.style.backgroundPosition = 'center';
         acceptPopup.style.width = '80%';
@@ -298,15 +324,16 @@
         acceptPopup.style.textAlign = 'center';
         acceptPopup.style.display = 'flex';
         acceptPopup.style.flexDirection = 'column';
-        acceptPopup.style.justifyContent = 'center'; // Aligns content to the center
-        acceptPopup.style.cursor = 'pointer'; // Changes the cursor to indicate it's clickable
+        acceptPopup.style.justifyContent = 'center';
+        acceptPopup.style.cursor = 'pointer';
 
-        // Add an onclick event to redirect when the image is clicked
+
         acceptPopup.onclick = function () {
-            window.location.href = 'target-page.html'; // Replace 'target-page.html' with your destination URL
+            window.location.href = '../desktop.html';
         };
 
-        // Add a message inside the popup (optional)
+
+
         const message = document.createElement('p');
         message.style.margin = 'auto 0';
         message.style.fontSize = '18px';
@@ -314,7 +341,7 @@
         message.style.color = 'white';
         message.style.textShadow = '1px 1px 2px black';
 
-        // Append the message to the popup
+
         acceptPopup.appendChild(message);
 
         rightSideHud.appendChild(acceptPopup);
@@ -323,7 +350,7 @@
 
     function closePopup() {
         const rightSideHud = document.getElementById('rightSideHud');
-        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
+        rightSideHud.innerHTML = '';
     }
 
 </script>
