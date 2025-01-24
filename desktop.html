@@ -5,12 +5,12 @@
     <title>Desktop</title>
     <link href="stylesheet/reset-css.css" rel="stylesheet">
     <link href="stylesheet/font-css.css" rel="stylesheet">
-    <link href="stylesheet/desktop.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="stylesheet/desktop.css">
+    <script src="script.js" defer></script>
+
 </head>
 <body>
 <div class="desktop-grid">
-
     <div class="task-bar"></div>
     <div class="start">
         <img alt="icon" height="22px" src="elements/pictures/bigrosoft.png" width="22px">
@@ -18,122 +18,83 @@
     </div>
 
     <div class="start-menu">
-
-        <div class="menu-title">
-            Utilisateur
-        </div>
-
+        <div class="menu-title">Utilisateur</div>
         <div class="applications-list">
-            <div class="application" onclick="location.href='#'">
+            <div class="application" data-href="pages/files.html">
                 <img alt="icon" height="22px" src="elements/desktop-icon/explorer.exe_14_252.ico" width="22px">
                 Fichiers
             </div>
-            <a href="pages/doodle.html">
-                <div class="application" onclick="location.href='index.html'">
-                    <img alt="icon" height="22px" src="elements/pictures/logo/Doodle.png" width="22px">
-                    Doodle
-                </div>
-            </a>
-            <a id="mail">
-                <div class="application">
-                    <img alt="icon" height="22px" src="elements/pictures/logo/6mail.png" width="22px">
-                    6Mail
-                </div>
-            </a>
-            <a href="pages/2pype/2pype-paul.html">
-                <div class="application" onclick="location.href='pages/2pype/2pype-paul.html'">
-                    <img alt="icon" height="22px" src="elements/pictures/logo/2pype.png" width="22px">
-                    2Pype
-                </div>
-            </a>
-        </div>
-        <div class="disconnect" onclick="location.href='index.html'">
-            <img alt="icon" height="22px" src="elements/desktop-icon/imepadsv.exe_14_200_0.ico" width="22px">
-            Déconnecter
+            <div class="application" data-href="pages/doodle.html">
+                <img alt="icon" height="22px" src="elements/pictures/logo/Doodle.png" width="22px">
+                Doodle
+            </div>
+            <div class="application" data-href="pages/6mail.html">
+                <img alt="icon" height="22px" src="elements/pictures/logo/6mail.png" width="22px">
+                6Mail
+            </div>
+            <div class="application" data-href="pages/2pype/2pype-paul.html">
+                <img alt="icon" height="22px" src="elements/pictures/logo/2pype.png" width="22px">
+                2Pype
+            </div>
         </div>
     </div>
 
-    <div class="window-element"></div>
+    <div class="window-element">
+        <iframe id="content-iframe" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
 
-
-    <div class="desktop-element" id="desktop-element-1">
+    <div class="desktop-element-1" data-href="pages/trash.html">
         <div class="desktop-element-icon">
             <img alt="icon" height="44px" src="elements/desktop-icon/appwiz.cpl_14_1503.ico" width="44px">
         </div>
-        <div class="desktop-element-title">
-            Corbeille
+        <div class="desktop-element-title">Corbeille</div>
+    </div>
+    <div class="desktop-element-2" data-href="pages/doodle.html">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/pictures/logo/Doodle.png" width="44px">
         </div>
+        <div class="desktop-element-title">Doodle</div>
     </div>
-    <div class="desktop-element" id="desktop-element-2">
-        <a href="pages/doodle.html">
-            <div class="desktop-element-icon">
-                <img alt="icon" height="44px" src="elements/pictures/logo/Doodle.png" width="44px">
-            </div>
-            <div class="desktop-element-title">
-                Doodle
-            </div>
-        </a>
-    </div>
-    <div class="desktop-element" id="desktop-element-3">
+    <div class="desktop-element-3" data-href="pages/files.html">
         <div class="desktop-element-icon">
             <img alt="icon" height="44px" src="elements/desktop-icon/explorer.exe_14_252.ico" width="44px">
         </div>
-        <div class="desktop-element-title">
-            Fichiers
+        <div class="desktop-element-title">Fichiers</div>
+    </div>
+    <div class="desktop-element-4" data-href="pages/6mail.html">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/pictures/logo/6mail.png" width="44px">
         </div>
+        <div class="desktop-element-title">6Mail</div>
     </div>
-    <div class="desktop-element" id="desktop-element-4">
-        <a href="pages/6mail.html">
-            <div class="desktop-element-icon">
-                <img alt="icon" height="44px" src="elements/pictures/logo/6mail.png" width="44px">
-            </div>
-            <div class="desktop-element-title">
-                6Mail
-            </div>
-        </a>
-    </div>
-    <div class="desktop-element" id="desktop-element-5">
-        <a href="pages/2pype/2pype-paul.html">
-            <div class="desktop-element-icon">
-                <img alt="icon" height="44px" onclick="location.href='pages/2pype/2pype-paul.html'"
-                     src="elements/pictures/logo/2pype.png" width="44px">
-            </div>
-            <div class="desktop-element-title">
-                2Pype
-            </div>
-        </a>
+    <div class="desktop-element-5" data-href="pages/2pype/2pype-paul.html">
+        <div class="desktop-element-icon">
+            <img alt="icon" height="44px" src="elements/pictures/logo/2pype.png" width="44px">
+        </div>
+        <div class="desktop-element-title">2Pype</div>
     </div>
 </div>
 
-
-</body>
 <script>
-
     document.addEventListener('DOMContentLoaded', () => {
-        const mailLink = document.getElementById('mail');
-        const contentContainer = document.querySelector('.window-element');
+        const iframe = document.getElementById('content-iframe');
 
-        mailLink.addEventListener('click', () => {
-            const iframe = document.createElement('iframe');
-            iframe.src = 'pages/6mail.html';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = 'none';
-
-            contentContainer.innerHTML = '';
-            contentContainer.appendChild(iframe);
-            contentContainer.classList.add('active');
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!contentContainer.contains(event.target) && !mailLink.contains(event.target)) {
-                contentContainer.classList.remove('active');
+        // Function to handle link loading in iframe
+        function loadInIframe(href) {
+            if (href) {
+                iframe.src = href;
             }
+        }
+
+        // Add click event listeners to all elements with data-href attributes
+        document.querySelectorAll('[data-href]').forEach(element => {
+            element.addEventListener('click', () => {
+                const href = element.getAttribute('data-href');
+                loadInIframe(href);
+            });
         });
-    });
 
-
-    document.addEventListener('DOMContentLoaded', () => {
+        // Start menu toggle
         const startButton = document.querySelector('.start');
         const startMenu = document.querySelector('.start-menu');
 
@@ -147,29 +108,6 @@
             }
         });
     });
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const blackSquare = document.createElement('div');
-        blackSquare.className = 'black-square';
-        document.body.appendChild(blackSquare);
-
-
-        setTimeout(() => {
-            blackSquare.style.opacity = '0';
-        }, 100);
-
-        setTimeout(() => {
-            blackSquare.remove();
-        }, 1100);
-    });
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = 'index.html';
-        document.head.appendChild(link);
-    });
 </script>
+</body>
 </html>

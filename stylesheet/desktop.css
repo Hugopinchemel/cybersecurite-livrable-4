@@ -44,6 +44,7 @@ body {
     background-color: #255ed7;
     grid-column: 1 / 17;
     grid-row: 9 / 10;
+
 }
 
 .start {
@@ -71,29 +72,49 @@ body {
     backdrop-filter: blur(1px);
 }
 
-#desktop-element-1 {
+.desktop-element-1 {
     grid-column: 16 / 17;
     grid-row: 8 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#desktop-element-2 {
+.desktop-element-2 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#desktop-element-3 {
+.desktop-element-3 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#desktop-element-4 {
+.desktop-element-4 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#desktop-element-5 {
+.desktop-element-5 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .start-menu {
@@ -103,6 +124,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15% 75% 10%;
     background-color: #3580e2;
+
 }
 
 .menu-title {
@@ -148,6 +170,8 @@ iframe {
 .window-element {
     display: none;
     all: unset;
+    grid-column: 2/16;
+    grid-row: 1/9;
 }
 
 .window-element.active {
