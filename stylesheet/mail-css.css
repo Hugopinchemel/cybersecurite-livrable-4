@@ -8,8 +8,8 @@ body {
 
 .global-mail-hud {
     background-color: #c1c1c1;
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
