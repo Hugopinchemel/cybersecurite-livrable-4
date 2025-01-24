@@ -205,6 +205,6 @@
 
 
 
-.alert, .call-paul, .call-maman, .call-louis, #louis-1, #louis-2, #maman-1, #maman-2 {
+.alert, .call-paul, .call-maman, .call-louis {
     display: none;
 }
