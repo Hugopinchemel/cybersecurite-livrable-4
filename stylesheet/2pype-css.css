@@ -175,7 +175,6 @@
     grid-row: 2/3;
     height: fit-content;
 
-
 }
 
 .title-call {
@@ -184,7 +183,7 @@
 }
 
 .text {
-    font-size: large;
+    font-size: xx-large;
     grid-row: 4/5;
     max-width: 90%;
     text-align: center;
@@ -222,7 +221,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
-
 
 
 .alert, .call-paul, .call-maman, .call-louis {
