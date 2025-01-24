@@ -31,42 +31,6 @@ document.querySelectorAll(".mail").forEach(function (div) {
   div.addEventListener("click", clickHandler);
 });
 
-document
-  .querySelector(".third .first-content span")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    Swal.fire({
-      title: "Information",
-      text: "Ce lien redirige bien vers la page EDF.",
-      icon: "info",
-      confirmButtonText: "OK",
-    });
-  });
-
-document
-  .querySelector(".second .first-content span")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    Swal.fire({
-      title: "Erreur",
-      text: "Ce lien ne redirige pas vers la Fnac.",
-      icon: "error",
-      confirmButtonText: "OK",
-    });
-  });
-
-document
-  .querySelector(".fourth .first-content span")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    Swal.fire({
-      title: "Erreur",
-      text: "Ce lien ne réinitialise pas le mot de passe.",
-      icon: "error",
-      confirmButtonText: "OK",
-    });
-  });
-
 document.querySelectorAll(".mail").forEach(function (div) {
   div.addEventListener("click", function () {
     switch (context) {

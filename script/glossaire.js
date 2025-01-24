@@ -1,26 +1,21 @@
-// Sélectionner tous les termes
-const termes = document.querySelectorAll('.terme');
+document.querySelectorAll(".page4, .page3").forEach(function (div) {
+  div.style.display = "none";
+});
 
-// Ajouter un gestionnaire d'événement sur chaque terme
-termes.forEach(terme => {
-    terme.addEventListener('click', () => {
-        const definition = terme.nextElementSibling;
+document.getElementById("suivant").addEventListener("click", function () {
+  document.querySelectorAll(".page1, .page2").forEach(function (div) {
+    div.style.display = "none";
+  });
+  document.querySelectorAll(".page3, .page4").forEach(function (div) {
+    div.style.display = "block";
+  });
+});
 
-        // Fermer les autres définitions ouvertes
-        document.querySelectorAll('.definition').forEach(def => {
-            if (def !== definition && def.classList.contains('show')) {
-                def.classList.remove('show');
-                def.style.display = 'none';
-            }
-        });
-
-        // Afficher ou cacher la définition associée
-        if (definition.classList.contains('show')) {
-            definition.classList.remove('show');
-            definition.style.display = 'none';
-        } else {
-            definition.classList.add('show');
-            definition.style.display = 'block';
-        }
-    });
+document.getElementById("precedent").addEventListener("click", function () {
+  document.querySelectorAll(".page3, .page4").forEach(function (div) {
+    div.style.display = "none";
+  });
+  document.querySelectorAll(".page1, .page2").forEach(function (div) {
+    div.style.display = "block";
+  });
 });
