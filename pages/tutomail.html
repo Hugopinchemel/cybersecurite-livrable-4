@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6Mail</title>
+    <link rel="stylesheet" href="/stylesheet/reset-css.css" />
+    <link rel="stylesheet" href="/stylesheet/index-css.css" />
+    <link rel="stylesheet" href="/stylesheet/font-css.css" />
+    <link rel="stylesheet" href="/stylesheet/mail-css.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/script/mail.js" defer></script>
+  </head>
+  <body></body>
+  <video
+    id="tutovideo"
+    autoplay
+    style="position: fixed; width: 100%; height: 100%; object-fit: cover"
+  >
+    <source src="/assets/video/tutoemail.mp4" type="video/mp4" />
+  </video>
+  <script>
+    document.getElementById("tutovideo").addEventListener("ended", function () {
+      window.location.href = "/pages/6mail.html";
+    });
+  </script>
+</html>
