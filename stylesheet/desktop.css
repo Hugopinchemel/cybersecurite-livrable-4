@@ -44,7 +44,6 @@ body {
     background-color: #255ed7;
     grid-column: 1 / 17;
     grid-row: 9 / 10;
-
 }
 
 .start {
@@ -104,7 +103,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15% 75% 10%;
     background-color: #3580e2;
-
 }
 
 .menu-title {
