@@ -127,6 +127,7 @@
     }
 
     /* Styles généraux */
+
     body {
         font-family: Tahoma, sans-serif; /* Police typique de Windows XP */
         margin: 0;
@@ -135,6 +136,7 @@
     }
 
     /* Barre de navigation */
+
     .navbar {
         display: flex;
         align-items: center;
@@ -148,6 +150,7 @@
     }
 
     /* Boutons */
+
     .nav-btn {
         background-color: #e4e4e4; /* Couleur légèrement grise */
         border: 1px solid #ccc;
@@ -164,6 +167,7 @@
     }
 
     /* Section centrale */
+
     .nav-center {
         display: flex;
         align-items: center;
@@ -173,6 +177,7 @@
     }
 
     /* Icône de sécurité et texte */
+
     .security-warning {
         display: flex;
         align-items: center;
@@ -191,6 +196,7 @@
     }
 
     /* Barre d'URL */
+
     .url-bar {
         flex-grow: 1;
         max-width: 600px;
@@ -206,6 +212,7 @@
     }
 
     /* Section droite */
+
     .zoom {
         font-size: 12px;
         margin-right: 5px;

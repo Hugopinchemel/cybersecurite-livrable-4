@@ -245,7 +245,6 @@ function errorPopup() {
 }
 
 
-
 function acceptPopup() {
   const rightSideHud = document.getElementById('rightSideHud');
   rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
