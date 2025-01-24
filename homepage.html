@@ -2,112 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Desktop</title>
+    <title>index</title>
     <link href="stylesheet/reset-css.css" rel="stylesheet">
     <link href="stylesheet/font-css.css" rel="stylesheet">
-    <link href="stylesheet/desktop.css" rel="stylesheet">
-
-
+    <link href="stylesheet/homepage-css.css" rel="stylesheet">
 </head>
 <body>
-<div class="desktop-grid">
-    <div class="task-bar"></div>
-    <div class="start">
-        <img alt="icon" height="22px" src="elements/pictures/bigrosoft.png" width="22px">
-        Commencer
-    </div>
 
-    <div class="start-menu">
-        <div class="menu-title">Utilisateur</div>
-        <div class="applications-list">
-            <div class="application" data-href="pages/files.html">
-                <img alt="icon" height="22px" src="elements/desktop-icon/explorer.exe_14_252.ico" width="22px">
-                Fichiers
+<div class="display">
+    <div class="black-square"></div>
+    <div class="screen-background">
+        <div class="content">
+            <div class="left-div">
+                <div class="left-div-content">
+                    <div>
+                        <img alt="logo decrypte" class="logo-decrypt" src="elements/pictures/logo/logo decrypte.png">
+                    </div>
+                    <div>
+                        Pour commencer,
+                    </div>
+                    <div>
+                        cliquez sur votre nom d'utilisateur
+                    </div>
+                </div>
             </div>
-            <div class="application" data-href="pages/doodle.html">
-                <img alt="icon" height="22px" src="elements/pictures/logo/Doodle.png" width="22px">
-                Doodle
-            </div>
-            <div class="application" data-href="pages/6mail.html">
-                <img alt="icon" height="22px" src="elements/pictures/logo/6mail.png" width="22px">
-                6Mail
-            </div>
-            <div class="application" data-href="pages/2pype/2pype-paul.html">
-                <img alt="icon" height="22px" src="elements/pictures/logo/2pype.png" width="22px">
-                2Pype
-            </div>
-        </div>
-    </div>
+            <div class="line"></div>
+            <div class="right-div">
+                <div class="right-div-content-row" onclick="transition()">
+                    <img alt="profile picture" class="profile-picture" src="elements/pictures/profile/profile.png">
+                    <div>
+                        Jouer
+                    </div>
 
-    <div class="window-element">
-        <iframe id="content-iframe"></iframe>
-    </div>
+                </div>
+                <div class="right-div-content-row" onclick="transition_credits()">
+                    <img alt="credit picture" class="profile-picture" src="elements/pictures/profile/credits.png">
 
-    <div class="desktop-element" data-href="pages/trash.html">
-        <div class="desktop-element-icon">
-            <img alt="icon" height="44px" src="elements/desktop-icon/appwiz.cpl_14_1503.ico" width="44px">
+                    <div>
+                        Crédits
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="desktop-element-title">Corbeille</div>
-    </div>
-    <div class="desktop-element" data-href="pages/doodle.html">
-        <div class="desktop-element-icon">
-            <img alt="icon" height="44px" src="elements/pictures/logo/Doodle.png" width="44px">
-        </div>
-        <div class="desktop-element-title">Doodle</div>
-    </div>
-    <div class="desktop-element" data-href="pages/files.html">
-        <div class="desktop-element-icon">
-            <img alt="icon" height="44px" src="elements/desktop-icon/explorer.exe_14_252.ico" width="44px">
-        </div>
-        <div class="desktop-element-title">Fichiers</div>
-    </div>
-    <div class="desktop-element" data-href="pages/6mail.html">
-        <div class="desktop-element-icon">
-            <img alt="icon" height="44px" src="elements/pictures/logo/6mail.png" width="44px">
-        </div>
-        <div class="desktop-element-title">6Mail</div>
-    </div>
-    <div class="desktop-element" data-href="pages/2pype/2pype-paul.html">
-        <div class="desktop-element-icon">
-            <img alt="icon" height="44px" src="elements/pictures/logo/2pype.png" width="44px">
-        </div>
-        <div class="desktop-element-title">2Pype</div>
     </div>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const iframe = document.getElementById('content-iframe');
-
-        // Function to handle link loading in iframe
-        function loadInIframe(href) {
-            if (href) {
-                iframe.src = href;
-            }
-        }
-
-        // Add click event listeners to all elements with data-href attributes
-        document.querySelectorAll('[data-href]').forEach(element => {
-            element.addEventListener('click', () => {
-                const href = element.getAttribute('data-href');
-                loadInIframe(href);
-            });
-        });
-
-        // Start menu toggle
-        const startButton = document.querySelector('.start');
-        const startMenu = document.querySelector('.start-menu');
-
-        startButton.addEventListener('click', () => {
-            startMenu.style.display = startMenu.style.display === 'grid' ? 'none' : 'grid';
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!startButton.contains(event.target) && !startMenu.contains(event.target)) {
-                startMenu.style.display = 'none';
-            }
-        });
-    });
-</script>
 </body>
+<script>
+    function transition() {
+        const blackSquare = document.querySelector('.black-square');
+        blackSquare.style.opacity = '1';
+
+        setTimeout(() => {
+            window.location.href = 'desktop.html';
+        }, 1000);
+    }
+
+    function transition_credits() {
+        const blackSquare = document.querySelector('.black-square');
+        blackSquare.style.opacity = '1';
+
+        setTimeout(() => {
+            window.location.href = 'credits.html';
+        }, 1000);
+    }
+
+
+</script>
 </html>
