@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   alertTrust.addEventListener('click', () => {
-    window.location.href = '../../desktop.html';
+    closeIFrame();
   });
 
   alertLouis.addEventListener('click', () => {
-    window.location.href = '../../desktop.html';
+    closeIFrame();
   });
 });

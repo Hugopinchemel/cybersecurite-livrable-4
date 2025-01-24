@@ -95,7 +95,7 @@ document.querySelectorAll(".good").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -127,7 +127,7 @@ document.querySelectorAll(".good").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -159,7 +159,7 @@ document.querySelectorAll(".good").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -191,7 +191,7 @@ document.querySelectorAll(".good").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -223,7 +223,7 @@ document.querySelectorAll(".good").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -265,7 +265,7 @@ document.querySelectorAll(".false").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -297,7 +297,7 @@ document.querySelectorAll(".false").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -329,7 +329,7 @@ document.querySelectorAll(".false").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -361,7 +361,7 @@ document.querySelectorAll(".false").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
@@ -393,7 +393,7 @@ document.querySelectorAll(".false").forEach(function (div) {
                 confirmButtonText: "OK",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../desktop.html";
+                  // window.location.href = "../desktop.html";
                 }
               });
             }
