@@ -167,7 +167,8 @@
     grid-template-rows: 5% 25% 10% 35% 20% 5%;
     justify-items: center;
     align-items: center;
-    background-image: url("../elements/pictures/backgrounds/2pype-background.png");
+    background-image: url("../elements/pictures/backgrounds/2pype-background-call.png");
+    color: white;
 }
 
 .profile-picture-call {
