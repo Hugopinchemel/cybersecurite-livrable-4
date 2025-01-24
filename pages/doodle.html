@@ -163,7 +163,7 @@
         acceptButton.style.borderRadius = '4px';
         acceptButton.style.backgroundColor = '#E0E0E0';
         acceptButton.style.color = 'black';
-        acceptButton.style.fontFamily = 'Tahoma, sans-serif'; // Classic Windows font
+        acceptButton.style.fontFamily = 'Tahoma, sans-serif';
         acceptButton.style.boxShadow = '2px 2px 5px rgba(0, 0, 0, 0.3), -1px -1px 2px white inset';
         acceptButton.style.cursor = 'pointer';
 
@@ -269,13 +269,12 @@
 
     function errorPopup() {
         const rightSideHud = document.getElementById('rightSideHud');
-        rightSideHud.innerHTML = ''; // Clear the content of the right-side HUD
+        rightSideHud.innerHTML = '';
 
         const errorPopup = document.createElement('div');
         errorPopup.style.position = 'relative';
         errorPopup.style.margin = '20px auto';
-        errorPopup.style.backgroundImage = "url('../elements/pictures/backgrounds/bulleok.jpg')";
-        errorPopup.style.backgroundSize = 'contain'; // Ensures the image is fully visible without cropping
+        errorPopup.style.backgroundImage = "url('../elements/pictures/backgrounds/bulleok.jpg')"
         errorPopup.style.backgroundRepeat = 'no-repeat';
         errorPopup.style.backgroundPosition = 'center';
         errorPopup.style.width = '80%';
@@ -293,7 +292,6 @@
         };
 
         const message = document.createElement('p');
-        message.innerText = 'An error occurred. Click here to proceed.';
         message.style.margin = 'auto 0';
         message.style.fontSize = '18px';
         message.style.fontFamily = 'Tahoma, sans-serif';
