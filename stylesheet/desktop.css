@@ -142,18 +142,18 @@ body {
     cursor: pointer;
 }
 
-iframe{
+iframe {
     grid-column: 2/16;
     grid-row: 1/9;
 }
 
 .window-element {
-    grid-column: 2 / 16;
-    grid-row: 1 / 9;
     display: none;
     all: unset;
 }
 
 .window-element.active {
     display: block;
+    grid-column: 2 / 16;
+    grid-row: 1 / 9;
 }
