@@ -9,6 +9,9 @@ body {
     flex-direction: column;
     font-family: IbmPlexMono, serif;
     color: white;
+    background-image: url("elements/pictures/backgrounds/accueil 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .black-square {

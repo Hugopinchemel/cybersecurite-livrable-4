@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnTrustLouis = document.getElementById('btn-trust-louis');
   const btnNoTrustLouis = document.getElementById('btn-no-trust-louis');
   const alertTrust = document.getElementById('trust');
-  const alertLouis = document.getElementById('alert-louis');
+  const alertLouis = document.getElementById('Alert-Louis');
 
   nextBtn.addEventListener('click', () => {
     rightSide1.style.display = 'none';
@@ -22,21 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     alertLouis.style.display = 'block';
   });
 
-  const overlay = document.createElement('div');
-  overlay.className = 'overlay';
-  document.body.appendChild(overlay);
-
-  overlay.addEventListener('click', () => {
+  alertTrust.addEventListener('click', () => {
     window.location.href = '../../desktop.html';
   });
 
-  const showAlert = (alertId) => {
-    document.getElementById(alertId).style.display = 'block';
-    overlay.style.display = 'block';
-  };
-
-  const hideAlert = (alertId) => {
-    document.getElementById(alertId).style.display = 'none';
-    overlay.style.display = 'none';
-  };
+  alertLouis.addEventListener('click', () => {
+    window.location.href = '../../desktop.html';
+  });
 });

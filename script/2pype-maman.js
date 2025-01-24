@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnTrustMaman = document.getElementById('btn-trust-maman');
   const btnNoTrustMaman = document.getElementById('btn-no-trust-maman');
   const alertTrust = document.getElementById('trust');
-  const alertMaman = document.getElementById('alert-maman');
+  const alertMaman = document.getElementById('Alert-Maman');
 
   nextBtn.addEventListener('click', () => {
     rightSide1.style.display = 'none';
@@ -22,21 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     alertMaman.style.display = 'block';
   });
 
-  const overlay = document.createElement('div');
-  overlay.className = 'overlay';
-  document.body.appendChild(overlay);
-
-  overlay.addEventListener('click', () => {
+  alertTrust.addEventListener('click', () => {
     window.location.href = '2pype-louis.html';
   });
 
-  const showAlert = (alertId) => {
-    document.getElementById(alertId).style.display = 'block';
-    overlay.style.display = 'block';
-  };
-
-  const hideAlert = (alertId) => {
-    document.getElementById(alertId).style.display = 'none';
-    overlay.style.display = 'none';
-  };
+  alertMaman.addEventListener('click', () => {
+    window.location.href = '2pype-louis.html';
+  });
 });
