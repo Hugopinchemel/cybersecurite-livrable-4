@@ -1,0 +1,84 @@
+body {
+  background-image: url("../elements/pictures/backgrounds/desktop_background.png");
+  margin: 0;
+  padding: 0;
+}
+
+.containerbook {
+  background-image: url("../elements/pictures/backgrounds/gros_livre2.png");
+  background-size: cover;
+  background-position: center;
+  width: 1350px; /* Ajustez la taille selon vos besoins */
+  height: 920px; /* Ajustez la taille selon vos besoins */
+  margin: auto; /* Centre horizontalement */
+  display: flex;
+}
+
+.left-page {
+  width: 50%;
+}
+
+.right-page {
+  width: 50%;
+}
+
+.inside-right-page {
+  width: 85%;
+  margin: 8vh 2vw;
+}
+
+.inside-left-page {
+  width: 85%;
+  margin: 8vh 4vw;
+}
+
+.glossary-list {
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.glossary-list li {
+  margin-bottom: 5px;
+  padding: 10px;
+  font-weight: 600;
+  font-family: "Goudy Old Style", "Times New Roman", serif;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.left-page,
+.right-page {
+  position: relative;
+}
+
+#precedent {
+  position: absolute;
+  bottom: 60px;
+  left: 70px;
+}
+
+#suivant {
+  position: absolute;
+  bottom: 60px;
+  right: 70px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #4b3b2b;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Goudy Old Style", "Palatino Linotype", serif;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: transform 0.3s ease;
+  padding: 15px 20px;
+}
+
+button:hover {
+  background-color: #c2a68c;
+  transform: scale(1.05);
+}

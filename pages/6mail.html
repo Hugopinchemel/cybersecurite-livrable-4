@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Positionnement des blocs</title>
+    <title>6Mail</title>
     <link rel="stylesheet" href="/stylesheet/reset-css.css">
     <link rel="stylesheet" href="/stylesheet/index-css.css" />
     <link rel="stylesheet" href="/stylesheet/font-css.css" />
     <link rel="stylesheet" href="/stylesheet/mail-css.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/script/mail.js"defer></script>
+  </head>
   <body>
   <div>
     <div class="global-mail-hud">
@@ -29,19 +30,19 @@
                 </div>
                 <div class="alertproblem problem2">
                   <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
-                  <div class="alert-text">Le lien n'est pas valide il ne redirige pas vers le bon site. Accédez directement au site officiel en tapant l'URL dans votre navigateur et vérifiez vos commandes dans votre espace client.</div>
+                  <div class="alert-text">Le lieu de livraison ne correspond pas avec celui de votre adresse ce mail est donc du phishing. </div>
                 </div>
                 <div class="alertproblem problem3">
                   <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
-                  <div class="alert-text">Le lien redirige bien vers le site edf.</div>
+                  <div class="alert-text">Aucun élément indique que ce mail soit du phising</div>
                 </div>
                 <div class="alertproblem problem4">
                   <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
-                  <div class="alert-text">Vérifiez le lien et méfiez vous des objets alarmants en cas de doute contactez le service informatique via des canaux officiels.</div>
+                  <div class="alert-text">Vous ne possédez pas de véhicule ce mail est donc du phishing.</div>
                 </div>
                 <div class="alertproblem problem5">
                   <img src="../elements/pictures/backgrounds/bulle.png" alt="Alertproblem">
-                  <div class="alert-text">Cet email présente des signes de phishing : objet urgent, coordonnées bancaires suspectes, et lien frauduleux. Ne cliquez pas sur le lien, vérifiez les informations via des canaux officiels.</div>
+                  <div class="alert-text">Le nom de l’entreprise ne correspond pas avec celui de l’entreprise avec laquelle vous travailler. </div>
                 </div>
 
               <!-- ALERT BRAVO -->
@@ -92,11 +93,16 @@
                       </div>
                     </div>
                     <div class="first-content">
-                      Bonjour,<br>
-Nous avons détecté une activité suspecte sur votre compte. Pour votre sécurité, nous avons temporairement suspendu votre compte.
-Veuillez cliquer sur le lien ci-dessous pour vérifier vos informations et réactiver votre compte <br><br> :Cliquez ici pour vérifier: <br><br>
-Si vous ne réagissez pas dans les 24 heures, votre compte sera définitivement désactivé <br>
-Cordialement, <br> L'équipe support technique de Netflix
+                      <div class="netflix">
+                        Netflix - Notification - 24/01/25 - Facture numéro (Ν.4-4340474) <br><br>
+                        NETFLIX <br>
+                        Votre compte est suspendu en raison d'un problème avec votre dernier paiement <br><br>
+                        Cher utilisateur, <br>
+                        Nous rencontrons des difficultés avec vos informations de facturation.
+Voulez-vous réessayer de payer avec votre carte ou compte PayPal? <br>
+Réessayer le paiement <br> <br>
+L'équipe Netflix
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -197,15 +203,15 @@ Votre conseiller EDF
                 <div class="first-container">
                   <div class="first-header">
                     <div class="first-header-left">
-                      <div class="first-header-left-top">Action urgente requise : Mise à jour de votre mot de passe pour accéder aux outils de l'entreprise</div>
+                      <div class="first-header-left-top">AVIS DE CONTRAVENTION</div>
                       <div class="first-header-left-bottom">
                         <div class="first-header-left-bottom-img">
                           <img src="../elements/pictures/PDP.png" alt="Photo de profil">
                         </div>
                         <div class="first-header-left-bottom-text">
                           <div class="first-header-left-bottom-text-top">
-                            <div class="haut1">support_gestion</div>
-                            <div class="haut2">support@gestion-informatique-entreprise.com</div>
+                            <div class="haut1">antai.gouv</div>
+                            <div class="haut2">nepasrepondre_noreply@antai.gouv.fr</div>
                           </div>
                           <div class="first-header-left-bottom-text-bottom">CC/CCI</div>
                         </div>
@@ -216,20 +222,23 @@ Votre conseiller EDF
                     </div>
                   </div>
                   <div class="first-content">
-                    Bonjour XXX, <br> <br>
+                    Madame, Monsieur, <br> <br>
 
-Il semble que des tentatives non autorisées d'accès aient été détectées sur votre compte d'accès interne. Par mesure de sécurité, nous avons temporairement suspendu votre compte. <br> <br>
+          Le véhicule dont le certificat d'immatriculation est établi à votre nom fait l'objet d'un contrôle ayant permis de constater une infraction d'excès de vitesse le 16/02/25. <br> <br>
 
-Pour restaurer l'accès à vos outils et ressources internes, nous vous prions de vérifier votre identité en suivant le lien ci-dessous pour réinitialiser votre mot de passe. <br><br>
+          Votre véhicule a été contrôlé à : 85 km/h. <br>
+          - Pour une vitesse limite autorisée à: 70 km/h. <br>
+          - La vitesse retenue est de 80 km/h. <br> <br>
 
-<span>Réinitialiser mon mot de passe</span><br>
+          Cette infraction entraîne un retrait de 1 point(s) du permis de conduire et passable d'une amende de 45€. <br>
+          Vous devez payer l'amende en utilisant notre site de paiement en ligne. <br> <br>
 
-Nous vous recommandons de changer votre mot de passe immédiatement afin d'éviter tout accès non autorisé. Si vous ne réagissez pas dans les 24 heures, votre compte sera définitivement bloqué. <br><br>
+          <span>==> Lien sécurisé pour le paiement.</span> <br> <br>
 
-Merci de votre compréhension. <br><br>
+          Merci de votre compréhension. <br> <br>
 
-Cordialement,<br>
-L'équipe de support technique
+          Cordialement,<br>
+          L'équipe de support technique
                   </div>
                 </div>
               </div>
@@ -247,7 +256,7 @@ L'équipe de support technique
                         <div class="first-header-left-bottom-text">
                           <div class="first-header-left-bottom-text-top">
                             <div class="haut1">TechnoSolutions SARL</div>
-                            <div class="haut2">marc.dupont@technosolutions.com</div>
+                            <div class="haut2">marc.dupont@technoevolution.com</div>
                           </div>
                           <div class="first-header-left-bottom-text-bottom">CC/CCI</div>
                         </div>
@@ -258,14 +267,14 @@ L'équipe de support technique
                     </div>
                   </div>
                   <div class="first-content">
-                    Bonjour [XXX], <br>
-J'espère que vous allez bien. Je vous contacte concernant le dernier règlement à effectuer pour le projet Alpha, sur lequel nous travaillons ensemble avec TechnoSolutions. <br>
-Nous avons récemment mis à jour les coordonnées bancaires pour ce projet, et il est impératif que vous vérifiiez cette nouvelle information afin de finaliser le paiement prévu. Voici les nouvelles coordonnées à utiliser : <br>
-Bénéficiaire : TechnoSolutions SARL <br> IBAN : FR76 3000 6000 0000 1234 5678 910 <br> BIC : BPARFRPP <br> Montant : 45 000,00 EUR <br>
-Afin de procéder à la validation du paiement, veuillez cliquer sur le lien ci-dessous pour confirmer les informations et procéder à la mise à jour dans vos systèmes financiers : <br>
-Validation payement <br>
-Je vous remercie de traiter cette demande en priorité afin d'éviter toute interruption de service dans le cadre de notre collaboration.
-Bien à vous, <br> Marc Dupont <br> Responsable Comptabilité <br> TechnoSolutions SARL <br> marc.dupont@technosolutions.com
+                    Bonjour Thomas, <br>
+          J'espère que vous allez bien. Je vous contacte concernant le dernier règlement à effectuer pour le projet Alpha. <br>
+          Nous avons récemment mis à jour les coordonnées bancaires pour ce projet, et il est impératif que vous vérifiiez cette nouvelle information afin de finaliser le paiement prévu. Voici les nouvelles coordonnées à utiliser : <br>
+          Bénéficiaire : Technoévolution SARL <br> IBAN : FR76 3000 6000 0000 1234 5678 910 <br> BIC : BPARFRPP <br> Montant : 45 000,00 EUR <br>
+          Afin de procéder à la validation du paiement, veuillez cliquer sur le lien ci-dessous pour confirmer les informations et procéder à la mise à jour dans vos systèmes financiers : <br>
+          Validation payement <br>
+          Je vous remercie de traiter cette demande en priorité afin d’éviter toute interruption de service dans le cadre de notre collaboration. <br>
+          Bien à vous, <br> Marc Dupont <br> Responsable Comptabilité <br> Technoévolution SARL <br> marc.dupont@technoevolution.com
                   </div>
                 </div>
               </div>
@@ -275,8 +284,8 @@ Bien à vous, <br> Marc Dupont <br> Responsable Comptabilité <br> TechnoSolutio
                 <div class="mail" data-context="mail1"> <img src="../elements/pictures/profile/profile.png" alt="Photo de profil"><div class="mailname"><p class="bold">Netflix </p><p>Problème urgent avec votre compte Netflix — Bonjour, Nous avons détecté une activité suspecte sur votre compte. Pour votre sécurité, nous avons...</p></div></div>
                 <div class="mail" data-context="mail2"><img src="../elements/pictures/profile/profile.png" alt="Photo de profil"><div class="mailname"><p class="bold">FNAC </p><p>Confirmation de votre commande n°65167 — Bonjour, Nous vous confirmons la réception de votre commande n°65167. Voici les détails de votre achat : Produits : Smartphone XYZ... </p></div></div>
                 <div class="mail" data-context="mail3"><img src="../elements/pictures/profile/profile.png" alt="Photo de profil"><div class="mailname"><p class="bold">EDF </p><p>Votre consommation du mois dernier — Bonjour, Pour le mois dernier, voici l'évolution de la consommation d'électricité de votre logement situé dans la commune : BORDEAUX (PDL 01234567891011). DÉC 2023 :...</p></div></div>
-                <div class="mail" data-context="mail4"><img src="../elements/pictures/profile/profile.png" alt="Photo de profil"><div class="mailname"><p class="bold">support_gestion </p><p>Action urgente requise : Mise à jour de votre mot de passe — Bonjour XXX, Il semble que des tentatives non autorisées d'accès aient été détectées sur votre compte d'accès interne. Par mesure de sécurité...</p></div></div>
-                <div class="mail" data-context="mail5"><img src="../elements/pictures/profile/profile.png" alt="Photo de profil"><div class="mailname"><p class="bold">TechnoSolutions SARL </p><p> Paiement urgent pour le projet Alpha – Vérification des informations bancaires — Bonjour [XXX], J'espère que vous allez bien. Je vous contacte concernant le dernier règlement à effectuer pour le projet Alpha...</p></div></div> 
+                <div class="mail" data-context="mail4"><img src="../elements/pictures/profile/profile.png" alt="Photo de profil"><div class="mailname"><p class="bold">antai.gouv</p><p>Madame, Monsieur, Le véhicule dont le certificat d'immatriculation est établi à votre nom fait...</p></div></div>
+                <div class="mail" data-context="mail5"><img src="../elements/pictures/profile/profile.png" alt="Photo de profil"><div class="mailname"><p class="bold">TechnoSolutions SARL </p><p>Paiement urgent pour le projet Alpha – Vérification des informations bancaires — Bonjour Thomas, J'espère que vous allez bien. Je vous contacte concernant le dernier règlement à effectuer pour le projet Alpha...</p></div></div> 
             
         </div> 
     </div>

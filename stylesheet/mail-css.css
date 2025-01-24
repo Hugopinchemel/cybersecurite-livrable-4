@@ -299,6 +299,7 @@ span {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
+  width: fit-content;
 }
 
 .mail {
@@ -324,4 +325,11 @@ span {
   .bold {
     font-weight: bold;
   }
+}
+.netflix {
+  text-align: center;
+  font-size: 24px;
+}
+.contravention {
+  font-size: 22px;
 }
