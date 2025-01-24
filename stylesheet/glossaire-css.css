@@ -82,3 +82,28 @@ button:hover {
   background-color: #c2a68c;
   transform: scale(1.05);
 }
+
+.close-button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 60px; /* Increased from 40px */
+  height: 60px; /* Increased from 40px */
+  font-size: 32px; /* Increased from 24px */
+  color: black;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: black;
+  transform: scale(1.1);
+  border: 2px solid black;
+  transition: all 0.2s ease;
+}
